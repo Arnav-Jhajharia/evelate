@@ -1,15 +1,33 @@
 import React from 'react';
 import './../../styles/navbar.css'
 import ScrollReveal from 'scrollreveal';
+import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 function Header() {
     React.useEffect(() => {
         ScrollReveal().reveal('.header')
     }, [])
+
+
+
+  /*===== ACTIVE AND REMOVE MENU =====*/
+// const navLink = document.querySelectorAll('.nav__link');   
+
+function linkAction(){
+    const toggle = document.getElementById('header-toggle')
+    const nav = document.getElementById('nav-menu')
+    if(toggle && nav){
+        nav.classList.toggle('show')
+        toggle.classList.toggle('bx-x')
+    }
+
+}
+
   return (
     <header className="header">
       <a href="#" className="header__logo">Fun Fact</a>
       
-      <i className='bx bx-menu header__toggle' style={{ color: 'white' }} id="header-toggle"></i>
+      <FaBars onClick = {linkAction}className="hamburger-icon header__toggle" color='white' id="header-toggle"/>
       
       <nav className="nav" id="nav-menu">
         <div className="nav__content bd-grid">
@@ -38,7 +56,7 @@ function Header() {
               </li>
               
               <li className="nav__item dropdown">
-                <a href="catalog.html" className="nav__link dropdown__link">Catalog <i className='bx bx-chevron-down dropdown__icon'></i></a>
+                <Link to = {'/'} className="nav__link dropdown__link">Catalog <i className='bx bx-chevron-down dropdown__icon'></i></Link>
                 
                 <ul className="dropdown__menu">
                   <li className="dropdown__item"><a href="#" className="nav__link">Programming</a></li>

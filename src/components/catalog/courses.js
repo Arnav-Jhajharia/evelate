@@ -3,6 +3,7 @@ import courses from './courseDetails'
 import './styles.css'
 import { Link } from "react-router-dom";
 import ScrollReveal from 'scrollreveal';
+import NavBar from './../navbar/navbar'
 
 const CatalogPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -52,6 +53,7 @@ const CatalogPage = () => {
 
   return (
     <div className="catalog-page">
+      <NavBar />
       <div className="search-bar">
         <input
           type="text"
@@ -69,12 +71,12 @@ const CatalogPage = () => {
               {courses.map((course) => (
                             <Link to = {'courses/merkle'} style={{textDecoration: 'none', color: 'white'}}>
 
-                             <div className="card" style={{width: '18rem', minHeight: '25rem'}}>
+                             <div className="card" style={{width: '20rem', height: '30rem'}}>
                              <img className="card-img-top" src = {process.env.PUBLIC_URL + '/courses/' + course.image}alt="Card image cap" />
                              <div className="card-body">
                                <h2 className="card-title">{course.title}</h2>
                                <p className="card-text">{course.description}</p>
-                               <p href="#" className="btn btn-primary">Let's go shall we?</p>
+                               {/* <p href="#" className="btn btn-primary">Let's go shall we?</p> */}
                              </div>
                            </div>  </Link>
 
