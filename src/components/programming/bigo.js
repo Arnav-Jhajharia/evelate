@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ScrollReveal from 'scrollreveal';
 import './../../styles/navbar.css'
 import './../../styles/component.css'
-import allMessages from './../../helpers/const/merkle';
+import allMessages from './../../helpers/const/bigo';
 import Navbar from './../navbar/navbar'
 const messages = [
   // Your messages array here
@@ -66,19 +66,19 @@ const MerkleTreesConversation = () => {
 
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar name="Big O' Notation" />
 
       <br /><br />
 
       <div className="conversation" style={{ alignItems: 'center', color: 'white' }}>
         <div className="message-body sr">
-          <p style={{ textAlign: 'center' }} id="heading">Merkle Trees</p>
+          <p style={{ textAlign: 'center' }} id="heading">Big O' Notation</p>
         </div>
       </div>
 
       <div className="conversation-containers">
           {
-            allMessages[0].map(message => {
+            allMessages.map(message => {
                return ( <div style = {{alignItems:(message.speaker == 'Child')?'flex-end':(message.speaker=='Narrator')?'center':'flex-start', color:'blue'}}className='conversation' id = {message.age?("age" +message.age):""}>
                   <div style={{}}>
                     <div className='message-body sr'>
@@ -104,18 +104,11 @@ const MerkleTreesConversation = () => {
       <div id="noclue" style={{ backgroundColor: 'aliceblue' }}></div>
 
       <div className="iframe-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/V6gLY-1G4Mc?start=55"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/__vX2sjlpXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
 
-
+{/* 
       <div onClick={() => {window.location.assign('https://main--taupe-heliotrope-dbb3b1.netlify.app?value=Merkle', {target:'_blank'});}} className="conversation-containers">
       {
             allMessages[1].map(message => {
@@ -139,7 +132,7 @@ const MerkleTreesConversation = () => {
              )
             })
           }
-      </div>
+      </div> */}
 
       <script src="assets/js/main.js"></script>
     </React.Fragment>

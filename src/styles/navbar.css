@@ -77,6 +77,7 @@ a {
 
 .header__logo {
   color: var(--white-color);
+  font-size: 1.3rem;
 }
 
 .header__toggle {

@@ -6,13 +6,17 @@ body, html {
   }
   
 .conversation {
-    height: 100vh;
+    /* height: 30vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     overflow: hidden; 
-    padding: 3rem; 
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    margin-left: 1rem;
+    margin-right: 1rem;
    } 
   
   /* .layer {
@@ -49,6 +53,10 @@ body, html {
     font-family: Apercu;
     font-size: 2rem;
    
+  }
+
+  .message-body p {
+      margin: 0;
   }
 
 

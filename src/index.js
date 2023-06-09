@@ -1,10 +1,12 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import './index.css';
+import Setup from './components/setup/Checkout'
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import App from './App'
 import Catalog from './components/catalog/courses'
+import Random from './components/random/random'
 
 import {
   createBrowserRouter,
@@ -12,6 +14,7 @@ import {
   Route,
   useRouteError,
   Link,
+  redirect,
 } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -23,14 +26,35 @@ const router = createBrowserRouter([
 
   },
   {
-    path: "ca",
-    element: <div>About</div>,
+    path: "/catalog",
+    element: (<Catalog />),
+    errorElement: <ErrorBoundary />
   }
   ,
   {
     path: "/",
-    element: (<Catalog />),
-    errorElement: <ErrorBoundary />
+    element: (<Random />),
+    errorElement: <ErrorBoundary />,
+    loader: async () => {
+      let prev = localStorage.getItem('prev')
+      prev = !!prev;
+      if(prev) return redirect('/catalog')
+      
+      return null;
+    },
+  }
+  ,
+  {
+    path: "/setup",
+    element: (<Setup />),
+    errorElement: <ErrorBoundary />,
+    loader: async () => {
+      let prev = localStorage.getItem('prev')
+      prev = !!prev;
+      if(prev) return redirect('/catalog')
+      
+      return null;
+    },
   }
 ]);
 
@@ -42,7 +66,6 @@ createRoot(document.getElementById("root")).render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
 
 function ErrorBoundary() {
   let error = useRouteError();

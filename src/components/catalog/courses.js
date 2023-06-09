@@ -4,7 +4,7 @@ import './styles.css'
 import { Link } from "react-router-dom";
 import ScrollReveal from 'scrollreveal';
 import NavBar from './../navbar/navbar'
-
+import { FaSearch } from 'react-icons/fa';
 const CatalogPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -53,8 +53,9 @@ const CatalogPage = () => {
 
   return (
     <div className="catalog-page">
-      <NavBar />
+      <NavBar type = "catalog" name = "" />
       <div className="search-bar">
+        <FaSearch />
         <input
           type="text"
           value={searchQuery}
@@ -69,7 +70,7 @@ const CatalogPage = () => {
             <h2 className="category-title">{category}</h2>
             <ul className="course-list">
               {courses.map((course) => (
-                            <Link to = {'courses/merkle'} style={{textDecoration: 'none', color: 'white'}}>
+                            <Link to = {`/courses/${course.link}`} style={{textDecoration: 'none', color: 'white'}}>
 
                              <div className="card" style={{width: '20rem', height: '30rem'}}>
                              <img className="card-img-top" src = {process.env.PUBLIC_URL + '/courses/' + course.image}alt="Card image cap" />
@@ -79,13 +80,9 @@ const CatalogPage = () => {
                                {/* <p href="#" className="btn btn-primary">Let's go shall we?</p> */}
                              </div>
                            </div>  </Link>
-
               ))}
- 
             </ul>
-
           </div>
-        
         ))}
       </div>
     </div>

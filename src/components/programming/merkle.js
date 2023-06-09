@@ -12,6 +12,15 @@ const MerkleTreesConversation = () => {
   let [n, setN] = useState(1);
   const [data, setData] = useState([]);
   
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
 
   useEffect(() => {
@@ -28,8 +37,8 @@ const MerkleTreesConversation = () => {
     ScrollReveal().reveal(messagesArray, {
         delay: 200,
         distance: '50px',
-        duration: 200,
-        interval: 200
+        duration: 700,
+        interval: 500
 
     });
 
@@ -66,7 +75,7 @@ const MerkleTreesConversation = () => {
 
   return (
     <React.Fragment>
-      <Navbar />
+      <Navbar name = "Merkle Trees"/>
 
       <br /><br />
 
@@ -87,7 +96,7 @@ const MerkleTreesConversation = () => {
                           { textAlign:
                           (message.speaker == 'Narrator')?'center':(message.speaker == "Child")?'right':'left'
                         ,
-                        color: (message.speaker == 'Child')?'#8A9A5B':(message.speaker == 'Narrator')?'white':'#007bff'
+                        color: (message.speaker == 'Child')?'#00AEEF':(message.speaker == 'Narrator')?'white':'#FFC000'
                         }
                           
                           }>{message.content}</p>
@@ -127,7 +136,7 @@ const MerkleTreesConversation = () => {
                           { textAlign:
                           (message.speaker == 'Narrator')?'center':(message.speaker == "Child")?'right':'left'
                         ,
-                        color: (message.speaker == 'Child')?'#8A9A5B':(message.speaker == 'Narrator')?'white':'#007bff'
+                        color: (message.speaker == 'Child')?'#8A9A5B':(message.speaker == 'Narrator')?'white':'#3EC70B'
                         }
                           
                           }>{message.content}</p>
