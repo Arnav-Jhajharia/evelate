@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&family=Raleway:wght@200&display=swap");
 
 footer {
+  width: 100%;
   background-color: black;
   padding: 0 2rem 0;
   font-size: 1rem;
@@ -13,6 +14,7 @@ footer {
 
 .about {
   width: 50%;
+  margin: auto;
   text-align: left;
   padding: 1rem;
 }

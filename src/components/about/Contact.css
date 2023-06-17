@@ -1,0 +1,35 @@
+.first-one {
+    display: flex; 
+overflow: hidden; 
+flex-direction: column-reverse; 
+gap: 2.5rem; 
+ width: 90vw;   
+margin: auto;
+
+}
+
+
+.second-one {
+    height: 350px;
+
+
+
+
+}
+
+@media screen and (min-width: 1280px) {
+    .first-one {
+         margin-top: 3rem; 
+flex-direction: row; 
+width: 50vw;
+    }
+}@media (min-width: 768px) { 
+  .second-one {height: 550px; }
+ }
+
+
+
+@media (min-width: 1280px) { 
+ .second-one { flex: 1 1 0%; 
+height: auto; }
+ }

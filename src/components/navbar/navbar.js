@@ -1,12 +1,11 @@
 import React from 'react';
 import './../../styles/navbar.css'
-import ScrollReveal from 'scrollreveal';
 import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-function Header({type, name}) {
-    React.useEffect(() => {
-        ScrollReveal().reveal('.header')
-    }, [])
+function Header({type, name, navbar}) {
+    // React.useEffect(() => {
+    //     ScrollReveal().reveal('.header')
+    // }, [])
 
     console.log(type)
 
@@ -26,7 +25,7 @@ function linkAction(){
 
   return (
     <header className="header">
-      <a href="#" className="header__logo">FunFact</a>
+      <a href="#" className="header__logo">Evelate</a>
       
       <FaBars onClick = {linkAction}className="hamburger-icon header__toggle" color='white' id="header-toggle"/>
       
@@ -45,7 +44,7 @@ function linkAction(){
           <div className="nav__menu">
             <ul className="nav__list">
               <li className="nav__item"><a href="#" className="active">{name}</a></li>
-              {(type != 'catalog')?
+              {/* {(type != 'catalog')?
               <li className="nav__item dropdown">
                 <a href="#" className="nav__link dropdown__link">Change difficulty <i className='bx bx-chevron-down dropdown__icon'></i></a>
                 
@@ -55,7 +54,9 @@ function linkAction(){
                   <li className="dropdown__item"><a href="#age17" className="nav__link">Age 17</a></li>
                 </ul>
               </li>:<></>
-              }
+              } */}
+         {navbar}<br />
+           {/* </div> */}
               <li className="nav__item dropdown">
                 <Link to = {'/catalog'} className="nav__link dropdown__link">Catalog <i className='bx bx-chevron-down dropdown__icon'></i></Link>
                 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import courses from './courseDetails'
+import courses from './../../helpers/const/courseDetails'
 import './styles.css'
 import { Link } from "react-router-dom";
 import ScrollReveal from 'scrollreveal';
@@ -21,7 +21,7 @@ const CatalogPage = () => {
         delay: 200,
         distance: '50px',
         duration: 200,
-        interval: 200
+        interval: 100
 
     });
 
@@ -70,11 +70,11 @@ const CatalogPage = () => {
             <h2 className="category-title">{category}</h2>
             <ul className="course-list">
               {courses.map((course) => (
-                            <Link to = {`/courses/${course.link}`} style={{textDecoration: 'none', color: 'white'}}>
+                            <Link to = {`/courses/${course.link}`} style={{textDecoration: 'none', color: 'white'}} className='bhaisaaab'>
 
-                             <div className="card" style={{width: '20rem', height: '30rem'}}>
-                             <img className="card-img-top" src = {process.env.PUBLIC_URL + '/courses/' + course.image}alt="Card image cap" />
-                             <div className="card-body">
+                             <div className="card" style={{width: '20rem', height: course.image?'30rem':'20rem'}}>
+                        {course.image?     <img className="card-img-top" src = {(process.env.PUBLIC_URL + '/courses/' + course.image)}alt="Card image cap" />:""}
+                             <div className="card-body" >
                                <h2 className="card-title">{course.title}</h2>
                                <p className="card-text">{course.description}</p>
                                {/* <p href="#" className="btn btn-primary">Let's go shall we?</p> */}

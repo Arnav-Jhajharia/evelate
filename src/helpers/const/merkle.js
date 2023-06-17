@@ -1,6 +1,10 @@
 
 const messages = [
-
+    {
+      heading: 'itzaheading',
+      speaker: "Narrator",
+      content: "Merkle Trees",
+    },
     {
         speaker: "Narrator",
         content: "Aren't you the most inquisitive 5-year-old out there? Mr. ByteSprout told me you want to learn about merkle trees, oh where's that guy gone to-",
@@ -16,6 +20,13 @@ const messages = [
   speaker: "Child",
   content: "No, what's that?",
   color: "green"
+  },
+  {
+    image: true,
+  speaker: "Child",
+  content: "No, what's that?",
+  color: "green",
+  src: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f'
   },
   {
   speaker: "You",

@@ -6,8 +6,9 @@ import Setup from './components/setup/Checkout'
 import reportWebVitals from './reportWebVitals';
 import App from './App'
 import Catalog from './components/catalog/courses'
-import Random from './components/random/random'
-
+import Random from './components/random/home'
+import WordPower from './components/wordpower/wordpower'
+import Contact from './components/about/Contact'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,7 +19,15 @@ import {
 } from "react-router-dom";
 const router = createBrowserRouter([
   {
-    path: "/courses/:course",
+    path: "/courses/:type/:course",
+    element: (
+      <App />
+    ),
+    errorElement:<ErrorBoundary />
+
+  },
+  {
+    path: "/courses/:type",
     element: (
       <App />
     ),
@@ -31,16 +40,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorBoundary />
   }
   ,
-  {
+  { 
     path: "/",
     element: (<Random />),
     errorElement: <ErrorBoundary />,
     loader: async () => {
-      let prev = localStorage.getItem('prev')
-      prev = !!prev;
-      if(prev) return redirect('/catalog')
-      
-      return null;
+      let prev = localStorage.getItem('name')
+      if(!!prev) return prev;
+      else return null;
     },
   }
   ,
@@ -49,11 +56,27 @@ const router = createBrowserRouter([
     element: (<Setup />),
     errorElement: <ErrorBoundary />,
     loader: async () => {
-      let prev = localStorage.getItem('prev')
-      prev = !!prev;
-      if(prev) return redirect('/catalog')
+      let prev = localStorage.getItem('name')
+      if(!!prev) return redirect('/catalog')
       
-      return null;
+      return prev;
+    },
+  },
+
+  {
+    path: "/wordpower",
+    element: (<WordPower />),
+    errorElement: <ErrorBoundary />
+  },
+  {
+    path: "/contact",
+    element: (<Contact />),
+    errorElement: <ErrorBoundary />,
+    loader: async () => {
+      let prev = localStorage.getItem('name')
+      if(!!prev) return redirect('/catalog')
+      
+      return prev;
     },
   }
 ]);

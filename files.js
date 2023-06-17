@@ -1,47 +1,35 @@
-const conversationText = 
+// Paste chatgpt text over here
 
-`You: Hey there, my curious friend! Do you know how sometimes we need to do tasks on the computer, like solving puzzles or searching for something?
+const conversationText = `Person A: I recently came across a website that seemed suspicious. How can I identify and protect myself from fake sites?
 
-Child: Yeah, I do!
+Person B: That's a great question. Fake sites can be deceptive and pose various risks. One way to identify them is by checking the website's URL. Look for any misspellings, unusual domain extensions, or a lack of HTTPS encryption and lock symbol in the address bar, indicating a secure connection. Additionally, be cautious of sites that ask for sensitive information too soon or seem too good to be true. It's essential to stick to reputable websites, official links provided by trusted sources rather than following unknown links and using secure payment methods for online transactions.
 
-You: Awesome! So, Big O notation helps us understand how long these tasks might take as they get bigger or more complex. It's like knowing how much time we'll need to finish something.
+Person A: That's helpful. I've been receiving a significant amount of spam email lately, and I'm worried about falling victim to phishing attempts or scams. How can we protect ourselves from these threats?
 
-Child: Oh, that's interesting! How does it work?
+Person B: Spam emails can be quite tricky to navigate. To avoid falling for phishing attempts, scrutinize emails before taking any action. Never click on suspicious links or download attachments from unknown senders. Be cautious of unexpected emails asking for personal information or urgently requesting financial transactions. It's always a good practice to verify the sender's email address and double-check the legitimacy of the email by contacting the organization directly through official channels. Additionally, regularly update your email filters and use spam detection tools to minimize the risk of spam reaching your inbox. You can also hover over links without clicking to see if they lead to suspicious websites.
 
-You: Well, let's say we have a game where we need to find a special item hidden in different boxes. The Big O notation helps us understand how the time it takes to find the item changes as the number of boxes increases.
+Person A: Excellent advice. Now, let's talk about malware. How can we safeguard our devices and networks from malware attacks?
 
-Child: Is it like the best and worst outcomes?
+Person B: Protecting your devices from malware is crucial for maintaining your online security. It is a multi-layered process. Firstly, be cautious while downloading files or installing software from untrusted sources. Stick to official app stores or reputable websites for downloads. Keep your operating system, software, and antivirus programs up to date, as updates often include security patches. Regularly scan your system for any signs of infection and consider using additional security measures like firewalls and intrusion detection systems to fortify your defenses. 
 
-You: Exactly! We have the best-case scenario, which is the fastest time we could find the item. And then there's the worst-case scenario, where it might take the longest time.
+Person A: That makes sense. Choosing the right antivirus software is crucial. Can you provide any guidance on selecting the most effective one for our needs?
 
-Child: Can you give me an example?
+Person B: When selecting antivirus software, consider factors such as its detection and removal capabilities, real-time protection, system resource usage, and compatibility with your operating system. Look for software from reputable vendors with a proven track record in the cybersecurity industry. Read reviews, compare features, and check independent test results to gauge their effectiveness. Popular options include Norton, McAfee, Kaspersky, and Bitdefender. Remember to keep your antivirus software updated regularly to stay protected against the latest threats.
 
-You: Sure! Let's say we have ten boxes, and the special item is in the first box itself. In the best case, we find it right away! So, the time it takes is very short, like a blink of an eye.
-
-Child: That's quick!
-
-You: Now, in the worst case, the special item is in the last box. We have to check all the boxes one by one until we reach the last one. So, it takes more time, especially if there are many boxes.
-
-Child: Oh, I see! So, the worst case takes longer, but what about the other cases?
-
-You: Great question! That's where theta notation and omega come in. Theta notation tells us the average time it takes in all scenarios, and omega notation tells us the minimum time it can take.
-
-Child: That's cool! So, we know how long something will take on average and the best and worst possible times.
-
-You: You got it! Big O notation helps us understand and compare how long different tasks will take as they get bigger or more complex. It's like having a superpower to predict time and make smart decisions!
-
-Child: That's amazing! I want that superpower too!
-
-You: With a bit of practice and curiosity, you'll become a master of Big O notation and unlock the secrets of efficient problem-solving!`;
+Person A: Thank you for the insights. It's clear that a multi-faceted approach is necessary to combat fake sites, spam email, and malware effectively. Prioritizing our online security is essential in today's digital landscape.`
 
 const lines = conversationText.split('\n\n');
 const conversationArray = [];
 
 for (const line of lines) {
     // console.log(line)
-  const [speaker, content] = line.split(': ');
+  let firstColonIndex = line.indexOf(":");
+
+// Extract the speaker and content parts
+let speaker = line.slice(0, firstColonIndex).trim();
+let content = line.slice(firstColonIndex + 1).trim();
   const speakerObj = {
-    speaker: speaker.trim(),
+    speaker: speaker=='Person B'?'You':'Child',
     content: content.trim(),
   };
 

@@ -1,0 +1,50 @@
+
+.sectionHeadText {
+color: #ffffff; 
+font-weight: 900; 
+color: 30px;
+
+}
+
+@media (min-width: 640px) { 
+ .sectionHeadText { color: 50px; }
+ }
+@media (min-width: 768px) { 
+  .sectionHeadText { color: 60px; }
+ }
+
+
+
+.sectionSubText {
+ letter-spacing: 0.05em; 
+text-transform: uppercase; 
+color: 14px;
+}
+
+
+@media (min-width: 640px) { 
+  .sectionSubText {
+  color: 18px;
+  }
+ 
+}
+.padding {
+/* padding-left: 1.5rem;
+padding-right: 1.5rem; 
+padding-top: 2.5rem;
+padding-bottom: 2.5rem;  */
+}
+@media (min-width: 640px) { 
+/* .padding {  padding-top: 4rem; */
+/* padding-bottom: 4rem; 
+padding-left: 4rem;
+padding-right: 4rem;  */
+ /* } */
+}
+
+
+
+
+
+
+

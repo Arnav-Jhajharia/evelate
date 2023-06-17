@@ -1,10 +1,20 @@
 
+import { useNavigate } from "react-router-dom";
 import "./fonts/better.css";
-
-
+import { Link } from 'react-router-dom'
+import ModalNews from './../navbar/ModalNews'
 
 const App = () => {
-
+  const navigate = useNavigate()
+  const handleClick = () => {
+    if(localStorage.getItem('name'))
+    {
+      alert(localStorage.getItem('name'))
+    }
+    else {
+      navigate('/setup')
+    }
+  }
   return (
     <div className="lol">
       {/* <div className="header">
@@ -17,7 +27,7 @@ const App = () => {
       <br></br>
       <div className="boxgfather">
       <div className="boxfather">
-      <div className="betterbox betterbox1">
+      <div onClick = {handleClick}className="betterbox betterbox1">
         <div className="ellipse2">
         <img src={process.env.PUBLIC_URL + '/Media/b1.png'} alt="Image" />
 
@@ -38,23 +48,24 @@ const App = () => {
       </div>
       </div>
       <div className="boxfather">
-      <div className="betterbox betterbox3">
+      <ModalNews className = "betterbox betterbox3">
         <div className="ellipse2">
         <img src={process.env.PUBLIC_URL + '/Media/b3.png'} alt="Image" />
         </div>
         <div className="headerText">Stay in the know with our daily newsletters</div>
         <hr className="line1" />        <div className="shield"></div>
         <div className="mainText">Subscribe to our email service and receive curated content, updates, and fascinating tidbits delivered right to your inbox</div>
-      </div>
-
-      <div className="betterbox betterbox4">
+      </ModalNews>
+  
+      <Link to = '/catalog'className="betterbox betterbox4">
         <div className="ellipse2">
         <img src={process.env.PUBLIC_URL + '/Media/b4.png'} alt="Image" />
         </div>
         <div className="headerText">Explore a library of endless possibilities</div>
         <hr className="line1" />        <div className="thumb"></div>
         <div className="mainText">Choose from our diverse catalog of courses, covering a wide range of subjects. Expand your horizons and learn at your own pace with LearnTech's comprehensive learning resources.</div>
-      </div>
+      
+      </Link>
       </div>
     </div>
     </div>
