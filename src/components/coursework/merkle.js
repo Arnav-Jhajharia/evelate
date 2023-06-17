@@ -204,11 +204,7 @@ const MerkleTreesConversation = () => {
               <li>Join our discord</li>
               <Modal />
   
-              <p>Liked this course? Maybe you'll like these</p>
-              <li>Schizophrenia</li>
-              <li>CBT</li>
-              <li>Comparing yourself</li>
-              <p>For further info on mental health, visit mentica.in</p>
+             
               
            </div>
         </div>

@@ -32,12 +32,10 @@ function linkAction(){
       <nav className="nav" id="nav-menu">
         <div className="nav__content bd-grid">
           <a href="#" className="nav__perfil">
-            <div className="nav__img">
-              <img src="assets/imgs/perfil.jpg" alt="" />
-            </div>
+         
             
             <div>
-              <span className="nav__name">Evelate</span>
+              <span className="nav__name"><Link to="/">Evelate</Link></span>
             </div>
           </a>
           

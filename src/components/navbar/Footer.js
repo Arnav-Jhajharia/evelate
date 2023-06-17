@@ -126,7 +126,7 @@ export default function App() {
         <br /> <br />
         <div className={classes.lower}>
           <section className={classes.about}>
-            <h2>Sign up for our daily fact file  {email}</h2>
+            <h2>Sign up for our daily fact file.</h2>
             <p class="text-justify">
 
 <CustomizedInputsStyleOverrides setEmail = {setEmail}/>            </p>

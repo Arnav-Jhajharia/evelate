@@ -52,7 +52,15 @@
     justify-content: center;
     flex-direction: column;
   }
-  
+  .okirdk , .okidk{
+    text-align: center;
+  }
+
+  .okirdk {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+ 
   .preferences h1 {
     font-size: 2.5rem;
     text-align: center;
@@ -109,7 +117,9 @@
   
   /* Additional styling can be added as per your requirements */
  @media screen and (max-width: 768px) {
-    .okidk {
+    .okirdk {
         font-size: 1rem;
-    }
+        padding-left: 5%;
+        padding-right: 5%;
+      }
  } 

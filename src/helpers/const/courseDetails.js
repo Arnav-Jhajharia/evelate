@@ -1,10 +1,7 @@
 const courses = {
     Programming: [
-      { id: 1, title: 'Merkle Trees', category: 'Programming', description: `Explore the fascinating world of Merkle Trees and unlock the secrets of data integrity and tamper-proof verification. Discover how these binary trees enable efficient and secure validation in distributed systems and blockchain technology`, image: 'merkle.jpeg', link: 'merkle' },
-      { id: 2, title: `Big O' Notation`, category: 'Programming', description: `
-      Unleash the power of efficiency and speed with Big O Notation! 🚀 Dive into the world of algorithm analysis, and learn how to optimize your code as tasks grow`, image: 'bigo.jpg', link: 'bigo' },
-      // { id: 3, title: 'Bidd', category: 'Programming', description:'Unleash the power of efficiency and speed with Big O Notation! 🚀 Dive into the world of algorithm analysis, and learn how to optimize your code as tasks grow'},
-      // Add more programming courses...
+      { id: 1, title: 'Merkle Trees - Demo', category: 'Programming', description: `Explore the fascinating world of Merkle Trees and unlock the secrets of data integrity and tamper-proof verification. Discover how these binary trees enable efficient and secure validation in distributed systems and blockchain technology`, image: 'merkle.jpeg', link: 'merkle' },
+      { id: 2, title: 'Coming soon...', category: 'Programming', description: `Our programming courses are being crafted as we speak! Till then, see our demo course!`, image: 'comingsoon.webp', link: 'merkle' },
     ],
     "Bio TidBits": [
       { id: 4, title: 'Food Detectives',image:'fooddetectives.png', description: 'Join our adventure as we uncover the presence of starch in food through the magical color-changing power of iodine, and unveil the hidden adulterant Metanil Yellow lurking in dal. Become a food detective today!', link:'flb/fooddetectives' },
@@ -19,8 +16,8 @@ const courses = {
       { title: 'Cognitive Behavioural Therapy', category: 'Programming', link: 'mentica/cbt', image: 'cbt.png', description: 'Learn how CBT is developed and delivered and can benefit all of in terms of thought structuring, emotional and cognitive regulation and behaviour improvement. '},
       { title: 'Comparing yourself to others', category: 'Programming', link: 'mentica/comparing', description: `Learn 6 highly effective strategies and ideologies you can implement when you face negative effects of self-comparison.`, image: 'comparing.jpg'},
       { title: 'Schizophrenia', category: 'Programming', link: 'mentica/schizophrenia', image: 'schizophrenia.png', description: 'Understand the how, why, and what of schizophrenia with an empathetic yet scientific approach. '},
-      { title: 'Password Management', category: 'Programming', link: 'diglit/passwords', description: `Learn how to manage your passwords efficiently and securely`, image: 'comparing.jpg'},
-      { title: 'Strengthening Online Security', category: 'Programming', link: 'diglit/malware', image: 'schizophrenia.png', description: 'Enhance your online security with valuable tips to identify and protect yourself from various threats. Learn how to spot fake sites, avoid phishing attempts, and safeguard against malware.'}
+      { title: 'Password Management', category: 'Programming', link: 'diglit/passwords', description: `Learn how to manage your passwords efficiently and securely`, image: 'passwords.webp'},
+      { title: 'Strengthening Online Security', category: 'Programming', link: 'diglit/malware', image: 'schizophrenia.png', description: 'Enhance your online security with valuable tips to identify and protect yourself from various threats. Learn how to spot fake sites, avoid phishing attempts, and safeguard against malware.', image: 'malware.jpeg'}
     ],
     'Current Affairs': [
       { title: 'General overview at India (and the world)', link: 'currentaffairs/gh', description: " Explore the latest updates on international health assembly, hunger hotspots, India's insurance plan for diabetes, and Asian Development Bank's country partnership strategy."},

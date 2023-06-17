@@ -15,7 +15,7 @@ const Register = ({name}) => {
 
         <h1 style={{fontSize:'5rem'}}>Evelate</h1>
         <h1 className='okidk'>Learn. Experience. Elevate.</h1>            
-   
+           <h2 className='okirdk'>Explore a wide range of genres, including awareness and current affairs, with our company. We present information in a conversational and intuitive manner, offering rising levels of difficulty and free online resources to help you elevate your knowledge.</h2>         
     </div>
 
     <section className='preferences' >
