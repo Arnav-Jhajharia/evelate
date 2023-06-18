@@ -132,7 +132,7 @@ export default function App() {
 <CustomizedInputsStyleOverrides setEmail = {setEmail}/>            </p>
           </section>
           <section className={classes.socials}>
-            <h2>We are Social</h2>
+            <h2>We will be Social</h2>
             <SocialFollow />
           </section>
         </div>

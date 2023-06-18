@@ -9,6 +9,8 @@ import Catalog from './components/catalog/courses'
 import Random from './components/random/home'
 import WordPower from './components/wordpower/wordpower'
 import Contact from './components/about/Contact'
+import Rando from './components/random/Random'
+import {other} from './helpers/const/courseDetails'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -76,6 +78,53 @@ const router = createBrowserRouter([
       let prev = localStorage.getItem('name')
       if(!!prev) return redirect('/catalog')
       
+      return prev;
+    },
+  },
+    {
+    path: "/random",
+    element: (<Rando />),
+    errorElement: <ErrorBoundary />,
+    loader: async () => {
+      let prev = localStorage.getItem('name')
+      if(!!!prev) return redirect('/catalog')
+      else {
+        function shuffleArray(array) {
+  // Fisher-Yates shuffle algorithm
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+        function getRandomCourse(courses) {
+  const randomIndex = Math.floor(Math.random() * courses.length);
+  return courses[randomIndex];
+}
+
+const favoriteTopics = JSON.parse(localStorage.getItem('favorites'))
+const favoriteCategories = JSON.parse(localStorage.getItem('genre'))
+
+const suggestedCourses = other.filter(course =>
+  favoriteTopics.some(
+    topic =>
+      topic.title === course.title &&
+      favoriteCategories.includes(course.category)
+  )
+);
+
+if (parseInt(3 * Math.random()) != 1) {
+  shuffleArray(suggestedCourses);
+  const suggestedCourse = suggestedCourses[0];
+  console.log(suggestedCourse);
+  return redirect("/courses/" + suggestedCourse.link)
+} else {
+  const randomCourse = getRandomCourse(other);
+  return redirect("/courses/" + randomCourse.link)
+}
+
+      }
+
       return prev;
     },
   }

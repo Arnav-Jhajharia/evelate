@@ -1,7 +1,7 @@
 const courses = {
     Programming: [
       { id: 1, title: 'Merkle Trees - Demo', category: 'Programming', description: `Explore the fascinating world of Merkle Trees and unlock the secrets of data integrity and tamper-proof verification. Discover how these binary trees enable efficient and secure validation in distributed systems and blockchain technology`, image: 'merkle.jpeg', link: 'merkle' },
-      { id: 2, title: 'Coming soon...', category: 'Programming', description: `Our programming courses are being crafted as we speak! Till then, see our demo course!`, image: 'comingsoon.webp', link: 'merkle' },
+      // { id: 2, title: 'Coming soon...', category: 'Programming', description: `Our programming courses are being crafted as we speak! Till then, see our demo course on merkle trees!`, image: 'comingsoon.webp', link: 'merkle' },
     ],
     "Bio TidBits": [
       { id: 4, title: 'Food Detectives',image:'fooddetectives.png', description: 'Join our adventure as we uncover the presence of starch in food through the magical color-changing power of iodine, and unveil the hidden adulterant Metanil Yellow lurking in dal. Become a food detective today!', link:'flb/fooddetectives' },
@@ -9,7 +9,7 @@ const courses = {
       { id: 6, title: 'Asexual Reproduction Exploration', description: 'Dive into a fascinating biology experiment as we explore binary fission in Amoeba and budding in yeast. Witness the wonders of asexual reproduction in just three words!', image: 'ngos.png', link: 'flb/amoeba'},
       { title: 'Respiration Revealed', description: 'Explore the fascinating world of respiration as we experimentally demonstrate the release of carbon dioxide. Engage in this hands-on activity to witness the scientific wonders of cellular respiration in just three words!', link: 'flb/respiration', image: 'respiration.png'},
       { title: 'Revealing Stomata Secrets', description: 'Join us on a leaf-peeling adventure to unravel the mysteries of stomata. Learn how to prepare a temporary mount of a leaf peel and observe the intricate structures using a microscope.', link: 'flb/stomata', image: 'stomata.png'},
-      { title: 'Exploring Osmosis', description: 'Dive into the world of osmosis as we investigate the absorption of water by raisins. Witness the fascinating process of osmosis in action and understand its significance in biological systems. ', link: 'flb/respiration', image: 'raisins.png'}
+      { title: 'Exploring Osmosis', description: 'Dive into the world of osmosis as we investigate the absorption of water by raisins. Witness the fascinating process of osmosis in action and understand its significance in biological systems. ', link: 'flb/osmosis', image: 'raisins.png'}
       // Add more economics courses...
     ],
     'Awareness and Health': [
@@ -38,8 +38,12 @@ export const cmap = {
   "mentica":"mentica/index",
   "currentaffairs":"currentaffairs/index",
   "flb":"flb/index",
-  "diglit":"diglit/index"
+  "diglit":"diglit/index",
+  "bio":"flb/samyukta"
 }
 export default courses;
   
-  
+export const other =  Object.entries(courses).flatMap(([category, items]) =>
+  items.map(({ title, link }) => ({ title, category, link }))
+);
+

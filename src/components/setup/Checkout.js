@@ -79,11 +79,8 @@ export default function Checkout() {
 
   const handleNext = () => {
     if(activeStep == 2) {
-      localStorage.setItem("name", name);
-      localStorage.setItem("address", address);
-      localStorage.setItem("genre", genre);
-      localStorage.setItem("favorites", favorites);
-      navigate('/')
+
+      navigate('/random')
     }
     if(activeStep == 0)
     {
@@ -104,7 +101,13 @@ export default function Checkout() {
       else if(!(favorites.length >= 3 && favorites.length <= 10))
         alert("Choose atleast 3 favorites and less than 10")
       else
+      {
+              localStorage.setItem("name", name);
+      localStorage.setItem("address", address);
+      localStorage.setItem("genre", JSON.stringify(genre));
+      localStorage.setItem("favorites", JSON.stringify(favorites));
         setActiveStep(activeStep + 1)
+      }
     }
 
   };

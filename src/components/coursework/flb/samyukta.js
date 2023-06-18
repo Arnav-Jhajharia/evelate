@@ -11,7 +11,6 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useParams } from 'react-router-dom';
 import Modal from './../../about/Contact'
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const messages = [
@@ -190,25 +189,23 @@ const MerkleTreesConversation = () => {
   // });
 
 
-  const navigate = useNavigate();
+
   return (
     <Layout navbar = {<> <div className='left-orient left-orient2' style={{ fontSize: '1rem', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '100vw'}}> 
-             
-              
+              <p>Change difficulty</p>
+              <li><Link reloadDocument to="#age10">Age 10</Link></li>
+              <li><Link reloadDocument to = "#age18"> Age 18</Link></li>
+              {/* <li><Link reloadDocument to = "#age40">Age 40</Link></li> */}
               <p>Get unstuck</p>
                      
               <li>Join our discord</li>
               <Modal email="jhajhariaarnav@gmail.com"/>
-  
+{/*   
               <p>Liked this course? Maybe you'll like these</p>
-             <li><Link reloadDocument to='/courses/flb/photosynthesis'> Photosynthesis</Link></li>
-              <li><Link reloadDocument to='/courses/flb/respiration'>Respiration</Link></li>
-              <li><Link reloadDocument to='/courses/flb/osmosis'>Osmosis</Link></li>
-              <li><Link reloadDocument to='/courses/flb/amoeba'>Amoeba Binary Fission</Link></li>
-              <li><Link reloadDocument to='/courses/flb/fooddetectives'>Presence of starch</Link></li>
-              <li><Link reloadDocument to='/courses/flb/stomata'>Stomata Secrets</Link></li>
-              
-              <Link to = "https://freebiolabs.com"><p>For a more hands-on experience, visit freebiolabs.com</p></Link>
+             <li><Link reloadDocument to='/courses/mentica/schizophrenia'> Schizophrenia</Link></li>
+              <li><Link reloadDocument to='/courses/mentica/cbt'>CBT</Link></li>
+              <li><Link reloadDocument to='/courses/mentica/comparing'>Comparing yourself</Link></li>
+              <Link><p>For further info on mental health, visit mentica.in</p></Link> */}
            </div></>}>
     <React.Fragment>
       {/* <Navbar2 name = "Merkle Trees"/> */}
@@ -220,23 +217,21 @@ const MerkleTreesConversation = () => {
       <div className="conversation-containers">
         <div className='firstSection'>
            <div className='left-orient left-orient1' style={{paddingLeft: '2rem', fontSize: '1.2rem', height: '100vh', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '20vw'}}> 
-              
-              
+              <p>Change difficulty</p>
+              <li><Link reloadDocument to="#age10">Age 10</Link></li>
+              <li><Link reloadDocument to = "#age18"> Age 18</Link></li>
+              {/* <li><Link reloadDocument to = "#age40">Age 40</Link></li> */}
               <p>Get unstuck</p>
                      
               <li>Join our discord</li>
-              <Modal email="jhajhariaarnav@gmail.com"/>
-  
+              <Modal email="vaanigoenka445@gmail.com"/>
+{/*   
               <p>Liked this course? Maybe you'll like these</p>
-             <li><Link reloadDocument to='/courses/flb/photosynthesis'> Photosynthesis</Link></li>
-              <li><Link reloadDocument to='/courses/flb/respiration'>Respiration</Link></li>
-              <li><Link reloadDocument to='/courses/flb/osmosis'>Osmosis</Link></li>
-              <li><Link reloadDocument to='/courses/flb/amoeba'>Amoeba Binary Fission</Link></li>
-              <li><Link reloadDocument to='/courses/flb/fooddetectives'>Presence of starch</Link></li>
-              <li><Link reloadDocument to='/courses/flb/stomata'>Stomata Secrets</Link></li>
-                
+             <li><Link reloadDocument to='/courses/mentica/schizophrenia'> Schizophrenia</Link></li>
+              <li><Link reloadDocument to='/courses/mentica/cbt'>CBT</Link></li>
+              <li><Link reloadDocument to='/courses/mentica/comparing'>Comparing yourself</Link></li>
+              <Link><p>For further info on mental health, visit mentica.in</p></Link> */}
               
-              <Link to = "https://freebiolabs.com"><p>For a more hands-on experience on these experiments, visit freebiolabs.com</p></Link>
            </div>
         </div>
 
@@ -249,12 +244,11 @@ const MerkleTreesConversation = () => {
               
                 
 
-               return ( <div onClick={() => {
+               return ( <div  onClick={() => {
                 if(message.link) {
                     // navigate(0)
     window.location.replace(message.link);
-                }
-               }} to={message.image} style = {{alignItems:(message.speaker == 'Child')?'flex-end':(message.speaker=='Narrator')?'center':'flex-start', color:'blue'}}className={`conversation ${(img)?'margintop':(img=false)}`} id = {message.age?("age" +message.age):""}>
+                }}}style = {{alignItems:(message.speaker == 'Child')?'flex-end':(message.speaker=='Narrator')?'center':'flex-start', color:'blue'}}className={`conversation ${(img)?'margintop':(img=false)}`} id = {message.age?("age" +message.age):""}>
                   <div style={{}}>
                     
                     <div className='message-body sr'>

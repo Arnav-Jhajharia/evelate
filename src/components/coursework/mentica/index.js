@@ -193,9 +193,9 @@ const MerkleTreesConversation = () => {
   return (
     <Layout navbar = {<> <div className='left-orient left-orient2' style={{ fontSize: '1rem', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '100vw'}}> 
               <p>Change difficulty</p>
-              <li><Link to="#age10">Age 10</Link></li>
-              <li><Link to = "#age18"> Age 18</Link></li>
-              <li><Link to = "#age40">Age 40</Link></li>
+              <li><Link reloadDocument to="#age10">Age 10</Link></li>
+              <li><Link reloadDocument to = "#age18"> Age 18</Link></li>
+              <li><Link reloadDocument to = "#age40">Age 40</Link></li>
               <p>Get unstuck</p>
                      
               <li>Join our discord</li>
@@ -220,7 +220,7 @@ const MerkleTreesConversation = () => {
               <p>Change difficulty</p>
               <li><Link reloadDocument to="#age10">Age 10</Link></li>
               <li><Link reloadDocument to = "#age18"> Age 18</Link></li>
-              <li><Link to = "#age40">Age 40</Link></li>
+              <li><Link reloadDocument to = "#age40">Age 40</Link></li>
               <p>Get unstuck</p>
                      
               <li>Join our discord</li>

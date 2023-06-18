@@ -294,15 +294,7 @@ respiration: [
 osmosis:[
   {
     speaker: 'You',
-    content: "Hey there! Today we're going to dive into the fascinating world of reproduction and explore two different modes of asexual reproduction. Are you ready?"
-  },
-  {
-    speaker: 'Child',
-    content: "Yeah, I'm excited! What are we going to learn about?"
-  },
-  {
-    speaker: 'You',
-    content: "We'll be studying two processes: binary fission in Amoeba and budding in yeast. Binary fission is when a single-celled organism duplicates its genetic material and divides into two identical cells. On the other hand, budding is a process where a new organism grows as an outgrowth from the parent organism."
+    content: "Hey there! Today we're going to dive into the fascinating world of osmosis and imbibition, some ways how plants deal with water!"
   },
   {
     speaker: 'Child',
@@ -474,6 +466,130 @@ stomata: [
   {
     speaker: 'You',
     content: "You're welcome! Have a fantastic time exploring the secrets of stomata and the remarkable adaptations of plants."
+  }
+]
+,
+photosynthesis:[
+  {
+    speaker: 'Narrator',
+    heading: 'itzaheading',
+    content: 'Photosynthesis II'
+  },
+  {
+    age: 10,
+    speaker: 'You',
+    content: 'Hey my friend! You must be knowing that living things need food to keep going. But ever wondered how plants stay alive?'
+  },
+  { speaker: 'Child', content: 'Do they also need food to survive?' },
+  {
+    speaker: 'You',
+    content: 'They most certainly do. And they make their own food by a process called photosynthesis.'
+  },
+  { speaker: 'Child', content: 'Oh interesting! How does that work?' },
+  {
+    speaker: 'You',
+    content: 'So you must be loving the food your mom makes don’t you?'
+  },
+  { speaker: 'Child', content: 'Yeah I do' },
+  {
+    speaker: 'You',
+    content: 'So let’s assume that your mother is the chef who cooks food in the kitchen. She requires ingredients in order to make the food nutritious and tasty for you. But this is how you prepare food at home. In plants, the mother is the plant and the kitchen is the green parts of the plant, the chlorophyll is the requirement just like the gas stove whereas carbon dioxide, sunlight and water are the ingredients required. And that’s how the food is made in plants.'
+  },
+  {
+    speaker: 'Child',
+    content: 'Oh and that’s where the plants get energy from.'
+  },
+  {
+    speaker: 'You',
+    content: 'Yes. The plant food is called glucose that gives energy to the plants which is necessary for all the living things to survive.'
+  },
+  {
+    speaker: 'Child',
+    content: 'That means plants are just like us. They need their food to stay alive just like we humans do.'
+  },
+  {
+    speaker: 'You',
+    content: 'Yes and photosynthesis is how they get it.'
+  },
+
+  {
+    age: 18,
+    speaker: 'You',
+    content: 'Hey there mate! I’m sure you would be interested in learning more about the process of photosynthesis.'
+  },
+  {
+    speaker: 'Child',
+    content: 'Ah yes. I’ve always found it very intriguing'
+  },
+  {
+    speaker: 'You',
+    content: 'So let’s learn more about it. It is a process by which most of the living organisms convert light energy from the sun to chemical energy in the form of glucose. This process takes place in the chloroplasts of plants cells, and it involves a series of chemical reactions.'
+  },
+  { speaker: 'Child', content: 'Oh. But how is the glucose formed?' },
+  {
+    speaker: 'You',
+    content: 'Good question! During photosynthesis, plants take in carbon dioxide from the air, water from soil and they use energy from the sun to convert these raw materials to glucose and oxygen.'
+  },
+  {
+    speaker: 'Child',
+    content: 'The oxygen released is used by us. But what happens to the glucose formed?'
+  },
+  {
+    speaker: 'You',
+    content: 'Yes. The glucose acts as a source of energy and building blocks for other molecules.'
+  },
+  {
+    speaker: 'Child',
+    content: 'Oh I see now. Photosynthesis really is a very vital process for life on earth.'
+  },
+  {
+    speaker: 'You',
+    content: 'Exactly. Fun fact, photosynthesis is also important for the survival of human life on earth.'
+  },
+  { speaker: 'Child', content: 'How exactly?' },
+  {
+    speaker: 'You',
+    content: 'It removes carbon dioxide from the air which is then transformed into other organic compounds supporting life'
+  },
+  { speaker: 'Child', content: 'Oh that’s how!' },
+  {
+    speaker: 'You',
+    content: 'Glad you have a better understanding now.'
+  }
+
+],
+organs: [
+  {
+    speaker: 'Narrator',
+    heading: 'itzaheading',
+    content: 'Organ Systems'
+  },
+  {
+    age: 10,
+    speaker: 'You',
+    content: 'Ever wondered how humans exist and are able to perform tasks? The human body is made up of many different tissues called organs that work together to keep us alive and healthy. Would you like to know more about it?'
+  },
+  {
+    speaker: 'Child',
+    content: 'I would love to learn about this. But what roles do the organs play?'
+  },
+  {
+    speaker: 'You',
+    content: 'Organs play a major role in the working of the body and are made up of types of similar cells. Cells are what makes a human body. Basically the human body is a perfectly formed machine and the organs are different parts that make up the machine. In our body, substances like blood and oxygen act as the fuel to keep our body going.'
+  },
+  { speaker: 'Child', content: 'Ah. So how do these organs work?' },
+  {
+    speaker: 'You',
+    content: 'We humans have various types of organ systems that perform the required functions so that we can live.'
+  },
+  { speaker: 'Child', content: 'Can you give an example?' },
+  {
+    speaker: 'You',
+    content: "Sure. To make you understand better let me tell you about few of the systems. The digestive system includes our stomach, liver, and intestines, and it helps us break down and absorb food. The nervous system includes the brain, spinal cord, and nerves, and it helps us sense things and control your body's movements. The excretory system includes kidneys, bladder, and urethra, and it helps us get rid of waste products. All of these systems work together to keep our body healthy and functioning properly"
+  },
+  {
+    speaker: 'Child',
+    content: 'Oh. Now I have a better understanding of how different systems work in our body.'
   }
 ]
       

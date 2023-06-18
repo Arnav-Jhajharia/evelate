@@ -202,7 +202,7 @@ const MerkleTreesConversation = () => {
               <p>Get unstuck</p>
                      
               <li>Join our discord</li>
-              <Modal />
+              <Modal email={"jhajhariaarnav@gmail.com"} />
   
               <p>Liked this course? Maybe you'll like these</p>
               <li>Schizophrenia</li>
