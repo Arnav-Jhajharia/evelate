@@ -3,6 +3,7 @@ import ScrollReveal from 'scrollreveal';
 import './../../../styles/navbar.css'
 import './../../../styles/component.css'
 import allMessages from '../../../helpers/const/currentaffairs';
+import Layout from './../../navbar/courseLayout';
 
 import variables from '../../../helpers/const/vars';
 import Navbar2 from '../../navbar/navbar'
@@ -191,6 +192,22 @@ const MerkleTreesConversation = () => {
 
 
   return (
+     <Layout navbar = {<> <div className='left-orient left-orient2' style={{ fontSize: '1rem', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '100vw'}}> 
+              <p>Change difficulty</p>
+              <li><Link reloadDocument to="#age10">Age 10</Link></li>
+              <li><Link reloadDocument to = "#age18"> Age 18</Link></li>
+              <li><Link reloadDocument to = "#age40">Age 40</Link></li>
+              <p>Get unstuck</p>
+                     
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
+              <Modal email="jhajhariaarnav@gmail.com"/>
+  
+              <p>Liked this course? Maybe you'll like these</p>
+             {/* <li><Link reloadDocument to='/courses/mentica/schizophrenia'> Schizophrenia</Link></li>
+              <li><Link reloadDocument to='/courses/mentica/cbt'>CBT</Link></li>
+              <li><Link reloadDocument to='/courses/mentica/comparing'>Comparing yourself</Link></li> */}
+              {/* <Link><p>For further info on mental health, visit mentica.in</p></Link> */}
+           </div></>}>
     <React.Fragment>
       {/* <Navbar2 name = "Merkle Trees"/> */}
 
@@ -200,19 +217,20 @@ const MerkleTreesConversation = () => {
 
       <div className="conversation-containers">
         <div className='firstSection'>
-           <div className='left-orient' style={{paddingLeft: '2rem', fontSize: '1.2rem', height: '100vh', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '20vw'}}> 
-             
+           <div className='left-orient left-orient1' style={{paddingLeft: '2rem', fontSize: '1.2rem', height: '100vh', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '20vw'}}> 
+              
+              
+              <p>Change difficulty</p>
+              <li><Link reloadDocument to="#age10">Age 10</Link></li>
+              <li><Link reloadDocument to = "#age18"> Age 18</Link></li>
+              <li><Link reloadDocument to = "#age40">Age 40</Link></li>
               <p>Get unstuck</p>
                      
-              <li>Join our discord</li>
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
               <Modal email="jhajhariaarnav@gmail.com"/>
   
-              <p>Liked this informational? Maybe you'll like these as well!</p>
-             <li><Link reloadDocument to='/courses/currentaffairs/gh'> General Overview</Link></li>
-              <li><Link reloadDocument to='/courses/currentaffairs/finance'>Financial Updates in India</Link></li>
-              <li><Link reloadDocument to='/courses/currentaffairs/religiousban'>Religious Ban in Canada</Link></li>
-              <ModalNews><Link><p>To keep yourself elevated and learn new things, follow our daily newsletter!</p></Link></ModalNews>
-            <p>*This segment is about India</p>
+             
+              {/* <Link><p>For further info on mental health, visit mentica.in</p></Link> */}
            </div>
         </div>
 
@@ -278,6 +296,7 @@ const MerkleTreesConversation = () => {
 
       <script src="assets/js/main.js"></script>
     </React.Fragment>
+    </Layout>
   );
 };
 // const merkletrees = () => { return 'hi!'}
