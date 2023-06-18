@@ -87,7 +87,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorBoundary />,
     loader: async () => {
       let prev = localStorage.getItem('name')
-      if(!!!prev) return redirect('/catalog')
+      if(!!!prev) return redirect('/setup')
       else {
         function shuffleArray(array) {
   // Fisher-Yates shuffle algorithm
@@ -108,7 +108,7 @@ const favoriteCategories = JSON.parse(localStorage.getItem('genre'))
 const suggestedCourses = other.filter(course =>
   favoriteTopics.some(
     topic =>
-      topic.title === course.title &&
+      topic.title === course.title ||
       favoriteCategories.includes(course.category)
   )
 );

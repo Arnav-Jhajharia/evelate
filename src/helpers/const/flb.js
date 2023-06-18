@@ -469,7 +469,7 @@ stomata: [
   }
 ]
 ,
-photosynthesis:[
+photosynthesis2:[
   {
     speaker: 'Narrator',
     heading: 'itzaheading',

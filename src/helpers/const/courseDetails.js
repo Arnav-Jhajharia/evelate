@@ -9,7 +9,9 @@ const courses = {
       { id: 6, title: 'Asexual Reproduction Exploration', description: 'Dive into a fascinating biology experiment as we explore binary fission in Amoeba and budding in yeast. Witness the wonders of asexual reproduction in just three words!', image: 'ngos.png', link: 'flb/amoeba'},
       { title: 'Respiration Revealed', description: 'Explore the fascinating world of respiration as we experimentally demonstrate the release of carbon dioxide. Engage in this hands-on activity to witness the scientific wonders of cellular respiration in just three words!', link: 'flb/respiration', image: 'respiration.png'},
       { title: 'Revealing Stomata Secrets', description: 'Join us on a leaf-peeling adventure to unravel the mysteries of stomata. Learn how to prepare a temporary mount of a leaf peel and observe the intricate structures using a microscope.', link: 'flb/stomata', image: 'stomata.png'},
-      { title: 'Exploring Osmosis', description: 'Dive into the world of osmosis as we investigate the absorption of water by raisins. Witness the fascinating process of osmosis in action and understand its significance in biological systems. ', link: 'flb/osmosis', image: 'raisins.png'}
+      { title: 'Exploring Osmosis', description: 'Dive into the world of osmosis as we investigate the absorption of water by raisins. Witness the fascinating process of osmosis in action and understand its significance in biological systems. ', link: 'flb/osmosis', image: 'raisins.png'},
+      { title: 'Photosynthesis II', description: `"Unleash the green magic! Dive into the whimsical world of photosynthesis and discover how plants turn sunshine into life energy. Embrace the botanical secrets and let nature's creativity bloom within you`, link: 'flb/photosynthesis2', image: 'photosynthesis2.jpeg'},
+      { title: 'Organ Systems', description: 'Dive into the world or organ systems as we investigate what constitutes us. Witness the fascinating process of organ systems in action and understand its significance in biological systems. ', link: 'flb/organs', image: 'organ.webp'}
       // Add more economics courses...
     ],
     'Awareness and Health': [

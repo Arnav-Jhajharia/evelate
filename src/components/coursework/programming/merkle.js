@@ -3,12 +3,14 @@ import ScrollReveal from 'scrollreveal';
 import './../../../styles/navbar.css'
 import './../../../styles/component.css'
 import allMessages from './../../../helpers/const/merkle';
+import Layout from './../../navbar/courseLayout';
 
 import variables from './../../../helpers/const/vars';
 import Navbar2 from './../../navbar/navbar'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Modal from './../../about/Contact'
+import { Link } from 'react-router-dom';
 const messages = [
   // Your messages array here
 ];
@@ -22,7 +24,7 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 
-function QuiltedImageList() {
+function QuiltedImageList() { 
   return (
     <ImageList
       sx={{ position: 'sticky', top: 0, height: '100vh' , opacity: 0.2}}
@@ -184,7 +186,19 @@ const MerkleTreesConversation = () => {
 
 
 
-  return (
+  return (  
+    <Layout navbar = {<> <div className='left-orient left-orient2' style={{ fontSize: '1rem', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '100vw'}}> 
+              <p>Change difficulty</p>
+              <li><Link reloadDocument to="#age5">Age 5</Link></li>
+              <li><Link reloadDocument to = "#age10"> Age 10</Link></li>
+              <li><Link reloadDocument to = "#age17">Age 17</Link></li>
+              <p>Get unstuck</p>
+                     
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
+              <Modal email="jhajhariaarnav@gmail.com"/>
+  
+
+           </div></>}>
     <React.Fragment>
       {/* <Navbar2 name = "Merkle Trees"/> */}
 
@@ -194,21 +208,15 @@ const MerkleTreesConversation = () => {
 
       <div className="conversation-containers">
         <div className='firstSection'>
-           <div className='left-orient' style={{paddingLeft: '2rem', fontSize: '1.2rem', height: '100vh', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '20vw'}}> 
+            <div className='left-orient left-orient1' style={{paddingLeft: '2rem', fontSize: '1.2rem', height: '100vh', background: 'rgba(14, 16, 38, 0)', paddingRight: '4rem', maxWidth: '20vw'}}> 
               <p>Change difficulty</p>
-              <li>Age 5</li>
-              <li>Age 10</li>
-              <li>Age 17</li>
+              <li><Link reloadDocument to="#age5">Age 5</Link></li>
+              <li><Link reloadDocument to = "#age10"> Age 10</Link></li>
+              <li><Link reloadDocument to = "#age17">Age 17</Link></li>
               <p>Get unstuck</p>
                      
-              <li>Join our discord</li>
-              <Modal email={"jhajhariaarnav@gmail.com"} />
-  
-              <p>Liked this course? Maybe you'll like these</p>
-              <li>Schizophrenia</li>
-              <li>CBT</li>
-              <li>Comparing yourself</li>
-              <p>For further info on mental health, visit mentica.in</p>
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
+              <Modal email="jhajhariaarnav@gmail.com"/>
               
            </div>
         </div>
@@ -314,6 +322,7 @@ const MerkleTreesConversation = () => {
 
       <script src="assets/js/main.js"></script>
     </React.Fragment>
+    </Layout>
   );
 };
 

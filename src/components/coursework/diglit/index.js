@@ -198,8 +198,8 @@ const MerkleTreesConversation = () => {
               <li><Link reloadDocument to = "#age40">Age 40</Link></li>
               <p>Get unstuck</p>
                      
-              <li>Join our discord</li>
-              <Modal email="vaanigoenka445@gmail.com"/>
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
+              <Modal email="jhajhariaarnav@gmail.com"/>
   
               <p>Liked this course? Maybe you'll like these</p>
              <li><Link reloadDocument to='/courses/mentica/schizophrenia'> Schizophrenia</Link></li>
@@ -223,8 +223,8 @@ const MerkleTreesConversation = () => {
               <li><Link reloadDocument to = "#age40">Age 40</Link></li>
               <p>Get unstuck</p>
                      
-              <li>Join our discord</li>
-              <Modal email="vaanigoenka445@gmail.com"/>
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
+              <Modal email="jhajhariaarnav@gmail.com"/>
   
               <p>Liked this course? Maybe you'll like these</p>
              <li><Link reloadDocument to='/courses/mentica/schizophrenia'> Schizophrenia</Link></li>

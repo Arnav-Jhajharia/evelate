@@ -197,7 +197,7 @@ const MerkleTreesConversation = () => {
               
               <p>Get unstuck</p>
                      
-              <li>Join our discord</li>
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
               <Modal email="jhajhariaarnav@gmail.com"/>
   
               <p>Liked this course? Maybe you'll like these</p>
@@ -224,7 +224,7 @@ const MerkleTreesConversation = () => {
               
               <p>Get unstuck</p>
                      
-              <li>Join our discord</li>
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
               <Modal email="jhajhariaarnav@gmail.com"/>
   
               <p>Liked this course? Maybe you'll like these</p>
@@ -234,7 +234,7 @@ const MerkleTreesConversation = () => {
               <li><Link reloadDocument to='/courses/flb/amoeba'>Amoeba Binary Fission</Link></li>
               <li><Link reloadDocument to='/courses/flb/fooddetectives'>Presence of starch</Link></li>
               <li><Link reloadDocument to='/courses/flb/stomata'>Stomata Secrets</Link></li>
-                
+
               
               <Link to = "https://freebiolabs.com"><p>For a more hands-on experience on these experiments, visit freebiolabs.com</p></Link>
            </div>

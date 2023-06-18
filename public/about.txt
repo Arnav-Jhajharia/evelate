@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Arapey
+- Font Author: Copyright (c) 2011, Eduardo Tunni (http://www.tipo.net.ar), with Reserved Font Name "Arapey"
+- Font Source: http://fonts.gstatic.com/s/arapey/v16/-W__XJn-UDDA2RC6Z9AcZkIzeg.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

@@ -36,6 +36,7 @@ export default function AddressForm({setName, setAddress}) {
         <Grid item xs={12}>
           <TextField
           onChange={handleAddress}
+          required
             id="address1"
             name="address1"
             label="Email address"

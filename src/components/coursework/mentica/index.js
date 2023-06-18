@@ -198,7 +198,7 @@ const MerkleTreesConversation = () => {
               <li><Link reloadDocument to = "#age40">Age 40</Link></li>
               <p>Get unstuck</p>
                      
-              <li>Join our discord</li>
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
               <Modal email="vaanigoenka445@gmail.com"/>
   
               <p>Liked this course? Maybe you'll like these</p>
@@ -223,7 +223,7 @@ const MerkleTreesConversation = () => {
               <li><Link reloadDocument to = "#age40">Age 40</Link></li>
               <p>Get unstuck</p>
                      
-              <li>Join our discord</li>
+              <li><Link to = "https://discord.gg/gt9wtGhv">Join our discord</Link></li>
               <Modal email="vaanigoenka445@gmail.com"/>
   
               <p>Liked this course? Maybe you'll like these</p>

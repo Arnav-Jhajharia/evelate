@@ -25,7 +25,7 @@ function linkAction(){
 
   return (
     <header className="header">
-      <a href="#" className="header__logo">Evelate</a>
+      <Link to="/" className="header__logo">Evelate</Link>
       
       <FaBars onClick = {linkAction}className="hamburger-icon header__toggle" color='white' id="header-toggle"/>
       
