@@ -129,6 +129,10 @@ body {
     margin: 1rem;
   }
 
+  .menticaimage {
+    width: 15%;
+  }
+
   @media screen and (min-width: 768px) {
     /* .card {
         margin: 1rem;
@@ -145,5 +149,9 @@ body {
     .bhaisaaab {
       margin: 0;
       margin-top: 0.2rem;
+    }
+
+    .menticaimage {
+      width: 60%;
     }
   }

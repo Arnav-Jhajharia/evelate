@@ -68,6 +68,11 @@ const CatalogPage = () => {
             
           <div className="category" key={category}>
             <h2 className="category-title">{category}</h2>
+            {(category == 'Mental Health by Mentica')?
+              <img alt='mentica' src = {process.env.PUBLIC_URL+'/courses/mentica_logo.png'} className='menticaimage'></img>
+            :
+            <></>
+            }
             <ul className="course-list">
               {courses.map((course) => (
                             <Link to = {`/courses/${course.link}`} style={{textDecoration: 'none', color: 'white'}} className='bhaisaaab'>

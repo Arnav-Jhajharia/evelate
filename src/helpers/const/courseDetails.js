@@ -3,7 +3,7 @@ const courses = {
       { id: 1, title: 'Merkle Trees - Demo', category: 'Programming', description: `Explore the fascinating world of Merkle Trees and unlock the secrets of data integrity and tamper-proof verification. Discover how these binary trees enable efficient and secure validation in distributed systems and blockchain technology`, image: 'merkle.jpeg', link: 'merkle' },
       // { id: 2, title: 'Coming soon...', category: 'Programming', description: `Our programming courses are being crafted as we speak! Till then, see our demo course on merkle trees!`, image: 'comingsoon.webp', link: 'merkle' },
     ],
-    "Bio TidBits": [
+    "Bio TidBits (by Freebiolabs)": [
       { id: 4, title: 'Food Detectives',image:'fooddetectives.png', description: 'Join our adventure as we uncover the presence of starch in food through the magical color-changing power of iodine, and unveil the hidden adulterant Metanil Yellow lurking in dal. Become a food detective today!', link:'flb/fooddetectives' },
       { id: 5, title: 'Let There Be Light',description: 'Join us on an exciting journey to uncover the secret of how plants make food. Using just a potted plant, water, and iodine solution, we reveal the vital role of sunlight in the magical process called photosynthesis.', image: 'photosynthesis.png', link:'flb/photosynthesis' },
       { id: 6, title: 'Asexual Reproduction Exploration', description: 'Dive into a fascinating biology experiment as we explore binary fission in Amoeba and budding in yeast. Witness the wonders of asexual reproduction in just three words!', image: 'ngos.png', link: 'flb/amoeba'},
@@ -14,10 +14,12 @@ const courses = {
       { title: 'Organ Systems', description: 'Dive into the world or organ systems as we investigate what constitutes us. Witness the fascinating process of organ systems in action and understand its significance in biological systems. ', link: 'flb/organs', image: 'organ.webp'}
       // Add more economics courses...
     ],
-    'Awareness and Health': [
-      { title: 'Cognitive Behavioural Therapy', category: 'Programming', link: 'mentica/cbt', image: 'cbt.png', description: 'Learn how CBT is developed and delivered and can benefit all of in terms of thought structuring, emotional and cognitive regulation and behaviour improvement. '},
-      { title: 'Comparing yourself to others', category: 'Programming', link: 'mentica/comparing', description: `Learn 6 highly effective strategies and ideologies you can implement when you face negative effects of self-comparison.`, image: 'comparing.jpg'},
-      { title: 'Schizophrenia', category: 'Programming', link: 'mentica/schizophrenia', image: 'schizophrenia.png', description: 'Understand the how, why, and what of schizophrenia with an empathetic yet scientific approach. '},
+    'Mental Health by Mentica': [
+      { title: 'Cognitive Behavioural Therapy', category: 'Programming', link: 'mentica/cbt', image: 'cbt.png', description: 'Learn how CBT is developed and delivered and can benefit all of in terms of thought structuring, emotional and cognitive regulation and behaviour improvement.', by:'mentica'},
+      { title: 'Comparing yourself to others', category: 'Programming', link: 'mentica/comparing', description: `Learn 6 highly effective strategies and ideologies you can implement when you face negative effects of self-comparison.`, image: 'comparing.jpg',by: 'mentica'},
+      { title: 'Schizophrenia', category: 'Programming', link: 'mentica/schizophrenia', image: 'schizophrenia.png', description: 'Understand the how, why, and what of schizophrenia with an empathetic yet scientific approach.',by:'mentica'}
+    ],
+    "General Awareness":[
       { title: 'Password Management', category: 'Programming', link: 'diglit/passwords', description: `Learn how to manage your passwords efficiently and securely`, image: 'passwords.webp'},
       { title: 'Strengthening Online Security', category: 'Programming', link: 'diglit/malware', image: 'schizophrenia.png', description: 'Enhance your online security with valuable tips to identify and protect yourself from various threats. Learn how to spot fake sites, avoid phishing attempts, and safeguard against malware.', image: 'malware.jpeg'}
     ],
