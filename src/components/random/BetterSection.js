@@ -9,7 +9,7 @@ const App = () => {
   const handleClick = () => {
     if(localStorage.getItem('name'))
     {
-      alert(localStorage.getItem('name'))
+      navigate('/random')
     }
     else {
       navigate('/setup')
@@ -35,7 +35,7 @@ const App = () => {
         <div className="headerText">Discover a new world of knowledge every day</div>
         <hr className="line1" />
         <div className="circle"></div>
-        <div className="mainText">Evelate provide bite-sized information and insights through engaging short forms, keeping you informed and elevated.</div>
+        <div className="mainText">Evelate provides bite-sized information and insights through engaging short forms, keeping you informed and elevated.</div>
       </div>
 
       <div className="betterbox betterbox2">
