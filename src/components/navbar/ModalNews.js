@@ -110,7 +110,7 @@ const customTheme = (outerTheme) =>
     },
   });
 
- function CustomizedInputsStyleOverrides({setEmail}) {
+ function CustomizedInputsStyleOverrides({setEmail, email}) {
 
   const outerTheme = useTheme();
 
@@ -126,7 +126,30 @@ const customTheme = (outerTheme) =>
         {/* <TextField label="Outlined" /> */}
         <TextField label="Enter your email address" variant="outlined" onChange={(e) => setEmail(e.target.value)}/>
         {/* <TextField label="Standard" variant="standard" /> */}
-        <Button variant="contained"><BsArrowRight /></Button>
+        <Button onClick ={(g) => {
+            
+       const formData = new FormData();
+
+formData.append('email', email);
+
+fetch('https://restfulapievelate.000webhostapp.com/', {
+  method: 'POST',
+  body: formData
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    alert("Your email has been registered!")
+    // Handle the response from the PHP file
+  })
+  .catch(error => {
+    console.error(error);
+    alert("Try again!")
+
+    // Handle any errors
+  });
+
+}}variant="contained"><BsArrowRight /></Button>
 
       </ThemeProvider>
     </Box>
@@ -158,7 +181,7 @@ export default function App({children, className}) {
             <h2>Sign up for our daily fact file  {email}</h2>
             <p class="text-justify">
 
-<CustomizedInputsStyleOverrides setEmail = {setEmail}/>            </p>
+<CustomizedInputsStyleOverrides  email = {email} setEmail = {setEmail}/>            </p>
           </section>
     
        

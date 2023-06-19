@@ -86,9 +86,24 @@ const router = createBrowserRouter([
     element: (<Rando />),
     errorElement: <ErrorBoundary />,
     loader: async () => {
+
       let prev = localStorage.getItem('name')
+     
+  
       if(!!!prev) return redirect('/setup')
       else {
+
+const today = new Date().toLocaleDateString();
+  const lastClickedDate = localStorage.getItem('lastClickedDate');
+
+  if (lastClickedDate === today) {
+    // User has already clicked today
+    return redirect("/courses/" + JSON.parse(localStorage.getItem('course')).link);
+  } else {
+    // User has not clicked today, update the storage with today's date
+    localStorage.setItem('lastClickedDate', today);
+    // return false;
+  }
         function shuffleArray(array) {
   // Fisher-Yates shuffle algorithm
   for (let i = array.length - 1; i > 0; i--) {
@@ -112,20 +127,24 @@ const suggestedCourses = other.filter(course =>
       favoriteCategories.includes(course.category)
   )
 );
+  
+
 
 if (parseInt(3 * Math.random()) != 1) {
   shuffleArray(suggestedCourses);
   const suggestedCourse = suggestedCourses[0];
   console.log(suggestedCourse);
+  localStorage.setItem('course', JSON.stringify(suggestedCourse))
   return redirect("/courses/" + suggestedCourse.link)
 } else {
   const randomCourse = getRandomCourse(other);
+  localStorage.setItem('course',JSON.stringify(randomCourse))
   return redirect("/courses/" + randomCourse.link)
 }
 
       }
 
-      return prev;
+    
     },
   }
 ]);

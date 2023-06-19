@@ -62,7 +62,7 @@ const its= {
   },
         
   {
-    age: 17,
+    age: 18,
     speaker: 'You',
     content: 'Cognitive-Behavioral Therapy (CBT) is a form of psychotherapy that focuses on the relationship between our thoughts, emotions, and behaviors. \n\nIt is based on the idea that our thoughts (cognitions) play a significant role in shaping our emotions and actions.'
   },
@@ -123,6 +123,7 @@ const its= {
     content: 'You can check out the list of therapists on mentica.in. They also have self-help guides based on CBT practices, and 150+ unique resources to help you increase and sustain your mental health!'
   },
   {
+    age: 40,
     speaker: 'You',
     content: 'Cognitive-Behavioral Therapy (CBT) is a form of psychotherapy that focuses on the relationship between our thoughts, emotions, and behaviors. It is based on the idea that our thoughts (cognitions) play a significant role in shaping our emotions and actions.'
   },
@@ -243,7 +244,7 @@ schizophrenia:[
     content: 'Visit mentica.in and check out their 150+ resources today! Some are fun resources like an ‘emotional feeling wheel’ and they have links to weekly international stress-relief coloring sessions too.'
   },
   {
-    age: 17,
+    age: 18,
     speaker: 'You',
     content: 'Schizophrenia is a mental disorder characterized by disruptions in thinking, perception, and behavior.'
   },
