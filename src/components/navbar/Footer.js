@@ -128,7 +128,7 @@ fetch('https://restfulapievelate.000webhostapp.com/', {
   })
   .catch(error => {
     console.error(error);
-    alert("Try again!")
+    // alert("Try!")
 
     // Handle any errors
   });
