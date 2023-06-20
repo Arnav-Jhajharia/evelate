@@ -120,14 +120,14 @@ fetch('https://restfulapievelate.000webhostapp.com/', {
   method: 'POST',
   body: formData
 })
-  .then(response => response.json())
+  .then(response => response.text())
   .then(data => {
     console.log(data);
     alert("Your email has been registered!")
     // Handle the response from the PHP file
   })
   .catch(error => {
-    console.error(error);
+    console.log(error);
     // alert("Try!")
 
     // Handle any errors
