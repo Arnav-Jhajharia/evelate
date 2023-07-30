@@ -10,7 +10,7 @@ import { cmap } from './helpers/const/courseDetails'
 const App = () => {
 const { type } = useParams(); 
 
-    const path = cmap[type]
+    const path = cmap[type];
     let ComponentToRender = null;
 try {
   if (path) {

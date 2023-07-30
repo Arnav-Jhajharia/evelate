@@ -85,7 +85,8 @@ const messages = [
   ];
   
   
-  const allMessages = [messages, messages2]
+  const allMessages = {merkle: [messages, messages2]}
 
 
   export default allMessages;
+

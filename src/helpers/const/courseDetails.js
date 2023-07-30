@@ -1,6 +1,6 @@
 const courses = {
     Programming: [
-      { id: 1, title: 'Merkle Trees - Demo', category: 'Programming', description: `Explore the fascinating world of Merkle Trees and unlock the secrets of data integrity and tamper-proof verification. Discover how these binary trees enable efficient and secure validation in distributed systems and blockchain technology`, image: 'merkle.jpeg', link: 'merkle' },
+      { id: 1, title: 'Merkle Trees - Demo', category: 'Programming', description: `Explore the fascinating world of Merkle Trees and unlock the secrets of data integrity and tamper-proof verification. Discover how these binary trees enable efficient and secure validation in distributed systems and blockchain technology`, image: 'merkle.jpeg', link: 'typeA/merkle' },
       // { id: 2, title: 'Coming soon...', category: 'Programming', description: `Our programming courses are being crafted as we speak! Till then, see our demo course on merkle trees!`, image: 'comingsoon.webp', link: 'merkle' },
     ],
     "Bio TidBits (by Freebiolabs)": [
@@ -17,7 +17,9 @@ const courses = {
     'Mental Health by Mentica': [
       { title: 'Cognitive Behavioural Therapy', category: 'Programming', link: 'mentica/cbt', image: 'cbt.png', description: 'Learn how CBT is developed and delivered and can benefit all of in terms of thought structuring, emotional and cognitive regulation and behaviour improvement.', by:'mentica'},
       { title: 'Comparing yourself to others', category: 'Programming', link: 'mentica/comparing', description: `Learn 6 highly effective strategies and ideologies you can implement when you face negative effects of self-comparison.`, image: 'comparing.jpg',by: 'mentica'},
-      { title: 'Schizophrenia', category: 'Programming', link: 'mentica/schizophrenia', image: 'schizophrenia.png', description: 'Understand the how, why, and what of schizophrenia with an empathetic yet scientific approach.',by:'mentica'}
+      { title: 'Schizophrenia', category: 'Programming', link: 'mentica/schizophrenia', image: 'schizophrenia.png', description: 'Understand the how, why, and what of schizophrenia with an empathetic yet scientific approach.',by:'mentica'},
+      { title: 'ERP Therapy', category: 'Programming', link: 'mentica/erp', image: 'erp.jpeg', description: 'Understand the how, why, and what of schizophrenia with an empathetic yet scientific approach.',by:'mentica'}
+
     ],
     "General Awareness":[
       { title: 'Password Management', category: 'Programming', link: 'diglit/passwords', description: `Learn how to manage your passwords efficiently and securely`, image: 'passwords.webp'},
@@ -38,12 +40,13 @@ const courses = {
 
 export const cmap = {
   "bigo":"bigo",
-  "merkle": "programming/merkle",
+  "typeA": "programming/typeA",
   "mentica":"mentica/index",
   "currentaffairs":"currentaffairs/index",
   "flb":"flb/index",
   "diglit":"diglit/index",
-  "bio":"flb/samyukta"
+  "bio":"flb/samyukta", 
+  "roadmapcontent":"roadmaps/index"
 }
 export default courses;
   

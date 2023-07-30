@@ -477,6 +477,127 @@ comparing: [
   { speaker: 'Child', content: 'this was really helpful!' },
   { speaker: 'You', content: 'Find more resources at link to website' }
 
+],
+erp: [
+  {
+    speaker: 'Narrator',
+    content: 'ERP Therapy',
+    heading: 'itzaheading',
+  },
+  {
+    age: 10,
+    speaker: 'Child',
+    content: 'Hi, i recently came across this term ERP Therapy. What is it?'
+  },
+  {
+    speaker: 'You',
+    content: "Sure! ERP therapy is a special type of therapy that helps people overcome their fears by facing them in a safe and controlled way. \n\n It's like superhero training for the brain, where individuals gradually expose themselves to what they fear while resisting the urge to do certain things that make them feel safe. With practice, their fears become weaker until they no longer bother them. It's a brave and powerful way to conquer fears!"
+  },
+  {
+    speaker: 'Child',
+    content: 'Woah that sure does sound helpful! Let`s say someone has a fear of dogs. Would ERP Therapy be able to help them overcome this fear?'
+  },
+  {
+    speaker: 'You',
+    content: `Yes, absolutely! In ERP therapy, they would start by facing their fear in a safe and controlled way. They might look at pictures of dogs, talk about dogs, or even watch videos of dogs. \n\n The important part is that they don't run away or avoid dogs altogether, because that would make their fear stay strong. Instead, they slowly and gradually expose themselves to dogs. This is like a superhero training to face their fear head-on! \n\n While they're facing their fear, they also learn to resist doing certain things that help them feel safe, like avoiding dogs or constantly checking for them. This is called response prevention. By resisting these actions, they're training their brain to realise that dogs aren't as scary as they thought. \n\n The more they practise, the easier it becomes.\n\n It's like they're levelling up their bravery superpowers! Over time, their fear of dogs becomes weaker and weaker until it doesn't bother them anymore.`
+  },
+  {
+    speaker: 'Child',
+    content: 'That’s so cool! How else will ERP therapy affect my behaviour?'
+  },
+  {
+    speaker: 'You',
+    content: "ERP therapy can have a positive effect on patients by helping them conquer their fears and worries. When patients face their fears little by little, their anxiety starts to get weaker. They become braver and stronger superheroes! Over time, they learn new ways to handle their fears and feel more in control. \n\n ERP therapy teaches them that they don't have to be afraid and helps them enjoy more things without worries holding them back. It's like unlocking their superpowers and becoming the hero of their own story! With the support of a therapist, ERP therapy can make a big difference and help patients feel happier and more confident."
+  },
+  { speaker: 'Child', content: 'Got it. How do i get ERP Therapy?' },
+  {
+    speaker: 'You',
+    content: "First, talk to a trusted adult, like your parent or guardian, or even a teacher you feel comfortable with. Let them know that you'd like to try ERP therapy to overcome your fears or worries. They can help you find a therapist who specialises in ERP therapy. \n\nWhen you meet the therapist for the first time, they'll talk to you about your fears and explain how ERP therapy works. Together, you and the therapist will create a plan with small steps to face your fears. \n\nDon't worry, the therapist will be there to support and guide you through each step. With their help, you can become a brave superhero and conquer your fears!"
+  },
+  {
+    speaker: 'Child',
+    content: 'Great! How do i get in touch with professional therapists?'
+  },
+  {
+    speaker: 'You',
+    content: 'Mentica.in! this website has a list of therapists and adults who can help you with your mental health. Click here to check it out!'
+  },
+
+  
+  {
+    age: 18,
+    speaker: 'You',
+    content: 'You may have heard of cognitive behaviour therapy (CBT) before. CBT refers to a group of similar types of therapies used by mental health therapists for treating psychological disorders. The most important type of CBT for OCD is exposure and response prevention (ERP).\n' +
+      'ERP therapy, which stands for Exposure and Response Prevention therapy, is a type of treatment used to help people overcome their fears, anxiety, and obsessions. It is often used for conditions like obsessive-compulsive disorder (OCD) and phobias.'
+  },
+  {
+    speaker: 'Child',
+    content: 'I struggle with OCD/ I know someone who struggles with OCD! How does ERP really work?'
+  },
+  {
+    speaker: 'You',
+    content: 'ERP therapy involves two important components. The first is exposure, which means facing the things that make you anxious or trigger your obsessions. This can include thoughts, images, objects, or situations. The second component is response prevention, where you choose not to engage in compulsive behaviours once the anxiety or obsessions are triggered.\n' +
+      '\n' +
+      'Initially, a therapist will guide you through the ERP therapy process. However, as you progress, you will learn to do ERP exercises on your own to manage your symptoms. The goal of ERP therapy is to "retrain your brain" so that the object of your obsession is no longer seen as a threat.\n' +
+      '\n' +
+      'In summary, ERP therapy involves confronting your fears and resisting the urge to engage in compulsive behaviours. With the help of a therapist, you learn to manage your symptoms and change the way your brain perceives the things that cause anxiety or obsessions.'
+  },
+  {
+    speaker: 'Child',
+    content: 'Woah okay but how does the constant exposure to triggers not make the patient more anxious?'
+  },
+  {
+    speaker: 'You',
+    content: 'The idea of deliberately facing things that make you anxious might seem challenging or uncomfortable. If you have OCD, you may have attempted to confront your obsessions and anxiety before, only to feel even more anxious and scared. However, with ERP therapy, there is a key distinction. A trained clinician is there to support you throughout the process.\n' +
+      '\n' +
+      'In ERP therapy, the therapist collaborates with you to create an exposure plan. They guide you through confronting the situations that trigger anxiety and obsessions. They help you lean into the emotions that arise, stay with it, and resist the urge to engage in compulsive behaviours.\n' +
+      '\n' +
+      'The therapist serves as a coach, providing guidance and encouragement as you navigate through the process. Their expertise and support make ERP therapy a structured and effective approach to overcoming anxiety and OCD symptoms.\n' +
+      '\n'   },
+  {
+    speaker: 'Child',
+    content: 'Got it. Is ERP therapy the same as Flooding, another treatment for OCD?'
+  },
+  {
+    speaker: 'You',
+    content: "Flooding, another form of OCD treatment, aims to intensify an obsession to the point of overwhelming the patient's nervous system. This is done with the goal of resetting the nervous system, enabling the patient to cope with obsessions independently. In contrast, Exposure and Response Prevention therapy (ERP) takes a different approach.\n" +
+      '\n' +
+      'The objective of ERP is to slowly and safely expose patients to their obsessions in a controlled environment. As patients show progress in managing their obsessions, therapy becomes more intensive. The focus is on gradual exposure and teaching patients how to respond differently to their fears, ultimately empowering them to handle their obsessions effectively.'
+  },
+  {
+    speaker: 'Child',
+    content: 'Ahh I got it! We all need people to help us navigate through difficult circumstances. What can one expect to happen while undergoing ERP Therapy?'
+  },
+  {
+    speaker: 'You',
+    content: 'During ERP therapy, individuals can expect to experience various things as they work towards overcoming their fears and anxieties. Firstly, they may feel a sense of discomfort or anxiety when they begin confronting the situations or triggers that evoke their fears. This is normal and expected. The purpose of ERP therapy is to gradually expose oneself to these fears in a controlled and safe manner. Over time, individuals may notice that their anxiety starts to decrease as they repeatedly face their fears without engaging in their usual compulsive behaviours or avoidance tactics.\n' +
+      '\n' +
+      'As they progress through therapy, individuals may also experience a sense of empowerment and increased self-confidence. By actively confronting their fears, they realise that they have the ability to manage and overcome them. This newfound sense of control can have a positive impact on their overall well-being.\n' +
+      '\n' +
+      "\nIt's important to note that ERP therapy can be challenging, and individuals may encounter setbacks or moments of frustration. However, with the guidance and support of a trained therapist, they can navigate these difficulties and continue moving forward. The therapist will provide encouragement, teach coping strategies, and help individuals develop resilience in the face of their fears."
+  },
+  {
+    speaker: 'Child',
+    content: 'That’s very informative! It’s good to know that the patients can take small steps to navigate their way through this form of therapy in their own time. In particular, who will find ERP therapy most helpful?'
+  },
+  {
+    speaker: 'You',
+    content: 'ERP therapy can be most helpful for individuals who experience anxiety disorders, obsessive-compulsive disorder (OCD), or specific phobias. It is especially effective for those whose lives are significantly impacted by their fears and anxieties, and for those who struggle with compulsive behaviours or rituals as a way to cope with their anxiety.\n' +
+      'Although there has been much research into ERP, it is still unclear which patients with OCD benefit from this treatment. Most people who receive ERP will see improvement, reducing their symptoms through use of the skills learned during treatment.\n' +
+      'In general, people who pair ERP with other types of therapy—medicinal or otherwise—will experience the most success.\n' +
+      'ERP is only one part of a broader system of management. If you would like to learn more about ERP and other treatment options for OCD, it is important to reach out to your health care providers.\n' +
+      "It is essential to note that ERP therapy is not a one-size-fits-all solution, and the effectiveness may vary from person to person. The success of ERP therapy also depends on the individual's willingness to actively engage in the treatment process, as it involves facing fears and working through anxiety in a controlled and structured manner."
+  },
+  {
+    speaker: 'Child',
+    content: 'Sounds good! Where can I get resources to connect with psychologists and other vital information on mental health disorders?'
+  },
+  {
+    speaker: 'You',
+    content: 'You can check out the list of therapists on mentica.in. They also have self-help guides based on CBT practices, and 150+ unique resources to help you increase and sustain your mental health!'
+  }
+
+  
 ]}
 
 export default its;

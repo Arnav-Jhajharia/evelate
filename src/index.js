@@ -10,7 +10,10 @@ import Random from './components/random/home'
 import WordPower from './components/wordpower/wordpower'
 import Contact from './components/about/Contact'
 import Rando from './components/random/Random'
+import Roadmap from './components/Roadmap'
 import {other} from './helpers/const/courseDetails'
+import { BASE_URL } from './helpers/const/vars';
+import Login from './components/setup/Login';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,12 +22,55 @@ import {
   Link,
   redirect,
 } from "react-router-dom";
+
+import Home from "./components/wordpower/components/Home"
+import Quiz from "./components/wordpower/components/Quiz"
+import Result from "./components/wordpower/components/Result"
+import Error from "./components/wordpower/components/Error"
+import { Provider } from './components/wordpower/context/QuizContext'
+import RoadmapVE from "./components/Roadmap/courseDetails"
+
 const router = createBrowserRouter([
   {
-    path: "/courses/:type/:course",
+    path: "/wordpower",
+    element: <Home />,
+  },
+  {
+    path: "/wordpower/quiz/:level",
+    element: <Provider><Quiz /></Provider>,
+  },
+  {
+    path: "/wordpower/result",
+    element: <Provider><Result /></Provider>,
+  },
+  {
+    path: "/wordpower/*",
+    element: <Provider><Error /></Provider>,
+  },,
+
+  {
+    path: "/courses/:type/:course/:inner?",
     element: (
       <App />
     ),
+    errorElement:<ErrorBoundary />
+
+  },
+   {
+    path: "/roadmap",
+    element: (
+      <RoadmapVE />
+    ),
+
+    errorElement:<ErrorBoundary />
+
+  },
+  {
+    path: "/roadmap/:topic",
+    element: (
+      <Roadmap />
+    ),
+
     errorElement:<ErrorBoundary />
 
   },
@@ -47,7 +93,7 @@ const router = createBrowserRouter([
     element: (<Random />),
     errorElement: <ErrorBoundary />,
     loader: async () => {
-      let prev = localStorage.getItem('name')
+      let prev = localStorage.getItem('jwt')
       if(!!prev) return prev;
       else return null;
     },
@@ -58,24 +104,29 @@ const router = createBrowserRouter([
     element: (<Setup />),
     errorElement: <ErrorBoundary />,
     loader: async () => {
-      let prev = localStorage.getItem('name')
+      let prev = localStorage.getItem('jwt')
       if(!!prev) return redirect('/catalog')
       
       return prev;
     },
   },
-
-  {
-    path: "/wordpower",
-    element: (<WordPower />),
-    errorElement: <ErrorBoundary />
+{
+    path: "/login",
+    element: (<Login />),
+    errorElement: <ErrorBoundary />,
+    loader: async () => {
+      let prev = localStorage.getItem('jwt')
+      if(!!prev) return redirect('/catalog')
+      
+      return prev;
+    },
   },
   {
     path: "/contact",
     element: (<Contact />),
     errorElement: <ErrorBoundary />,
     loader: async () => {
-      let prev = localStorage.getItem('name')
+      let prev = localStorage.getItem('jwt')
       if(!!prev) return redirect('/catalog')
       
       return prev;
@@ -87,9 +138,9 @@ const router = createBrowserRouter([
     errorElement: <ErrorBoundary />,
     loader: async () => {
 
-      let prev = localStorage.getItem('name')
+      let prev = localStorage.getItem('jwt')
      
-  
+      console.log(prev)
       if(!!!prev) return redirect('/setup')
       else {
 
@@ -97,13 +148,20 @@ const today = new Date().toLocaleDateString();
   const lastClickedDate = localStorage.getItem('lastClickedDate');
 
   if (lastClickedDate === today) {
+    const c = (localStorage.getItem('course'))
+    console.log(c)
     // User has already clicked today
-    return redirect("/courses/" + JSON.parse(localStorage.getItem('course')).link);
+    if(c != "undefined" && c) {
+      console.log('y tho')
+      return redirect("/courses/" + JSON.parse(localStorage.getItem('course')).link);
+    }
   } else {
     // User has not clicked today, update the storage with today's date
     localStorage.setItem('lastClickedDate', today);
     // return false;
   }
+    console.log('bro')
+
         function shuffleArray(array) {
   // Fisher-Yates shuffle algorithm
   for (let i = array.length - 1; i > 0; i--) {
@@ -116,10 +174,30 @@ const today = new Date().toLocaleDateString();
   const randomIndex = Math.floor(Math.random() * courses.length);
   return courses[randomIndex];
 }
+let favoriteTopics = [], favoriteCategories = []
+try {
+    const response = await fetch(`${BASE_URL}/favorites`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('jwt')}`,
+      }
+    });
+    
+    if (!response.ok) {
+      console.log(response.body)
+      throw new Error('Request failed with status ' + response.status);
 
-const favoriteTopics = JSON.parse(localStorage.getItem('favorites'))
-const favoriteCategories = JSON.parse(localStorage.getItem('genre'))
+    }
 
+    const data = await response.json();
+    console.log(data)
+    favoriteCategories = data.genres;
+    favoriteTopics = data.favorites;
+    
+  } catch (error) {
+    console.error('Error:', error.message);
+    return;
+  }
+console.log(favoriteTopics, favoriteCategories)
 const suggestedCourses = other.filter(course =>
   favoriteTopics.some(
     topic =>

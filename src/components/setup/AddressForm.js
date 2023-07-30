@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
-export default function AddressForm({setName, setAddress}) {
+export default function AddressForm({setName, setAddress, setPassword}) {
 
   const handleName = (e) => {
     setName(e.target.value)
@@ -13,6 +13,10 @@ export default function AddressForm({setName, setAddress}) {
 
   const handleAddress = (e) => {
   setAddress(e.target.value)
+  }
+
+  const handlePassword = (e) => {
+  setPassword(e.target.value)
   }
   return (
     <React.Fragment>
@@ -40,6 +44,20 @@ export default function AddressForm({setName, setAddress}) {
             id="address1"
             name="address1"
             label="Email address"
+            fullWidth
+            // autoComplete="shipping address-line1"
+            variant="standard"
+          />
+        </Grid>
+
+
+         <Grid item xs={12}>
+          <TextField
+          onChange={handlePassword}
+          required
+            id="address1"
+            name="address1"
+            label="Password"
             fullWidth
             // autoComplete="shipping address-line1"
             variant="standard"

@@ -38,30 +38,30 @@ const App = () => {
         <div className="mainText">Evelate provides bite-sized information and insights through engaging short forms, keeping you informed and elevated.</div>
       </div>
 
-      <div className="betterbox betterbox2">
+      <Link to = '/wordpower'className="betterbox betterbox2">
         <div className="ellipse2">
         <img src={process.env.PUBLIC_URL + '/Media/b2.png'} alt="Image" />
         </div>
-        <div className="headerText">Power up your vocabulary!</div>
+        <div className="headerText">Elevate your Word Power!</div>
         <hr className="line1" />        <div className="spheres"></div>
         <div className="mainText">We offer interactive activities and games that enhance your word skills, making learning fun and engaging*</div>
-      </div>
+      </Link>
       </div>
       <div className="boxfather">
-      <ModalNews className = "betterbox betterbox3">
+      <Link to = '/roadmap' className = "betterbox betterbox3">
         <div className="ellipse2">
         <img src={process.env.PUBLIC_URL + '/Media/b3.png'} alt="Image" />
         </div>
-        <div className="headerText">Stay in the know with our daily newsletters</div>
+        <div className="headerText">Don't know where to start? Worry not!</div>
         <hr className="line1" />        <div className="shield"></div>
-        <div className="mainText">Subscribe to our email service and receive curated content, updates, and fascinating tidbits delivered right to your inbox</div>
-      </ModalNews>
+        <div className="mainText">Discover your potential with our personalized guide. Follow clear steps, access resources, and unlock success with our guided approach and community support.</div>
+      </Link>
   
       <Link to = '/catalog'className="betterbox betterbox4">
         <div className="ellipse2">
         <img src={process.env.PUBLIC_URL + '/Media/b4.png'} alt="Image" />
         </div>
-        <div className="headerText">Explore a library of endless possibilities</div>
+        <div className="headerText">Explore a library of topics</div>
         <hr className="line1" />        <div className="thumb"></div>
         <div className="mainText">Choose from our diverse catalog of courses, covering a wide range of subjects. Expand your horizons and learn at your own pace with LearnTech's comprehensive learning resources.</div>
       

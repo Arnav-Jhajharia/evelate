@@ -19,19 +19,47 @@ import lightfont from './ApercuLight.ttf'
 import medfont from './ApercuMedium.ttf'
 import { light } from '@mui/material/styles/createPalette';
 import { useNavigate } from 'react-router-dom';
+import {BASE_URL} from './../../helpers/const/vars'
+async function registerUser(userData) {
+  console.log('got called')
+  try {
+    const response = await fetch(`${BASE_URL}/register`, {
+      method: 'POST',
+      headers: {
+        
+        'Content-Type': 'application/json',
+                'Origin': 'http://localhost:3000' // Replace with your frontend URL
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
+      },
+      
+      body: JSON.stringify(userData),
+    });
+
+    if (!response.ok) {
+      throw new Error('Request failed with status ' + response.status);
+    }
+
+    const data = await response.json();
+    console.log('Access Token:', data.access_token);
+    localStorage.setItem('jwt', data.access_token)
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
 }
+
+
+// function Copyright() {
+//   return (
+//     <Typography variant="body2" color="text.secondary" align="center">
+//       {'Copyright © '}
+//       <Link color="inherit" href="https://mui.com/">
+//         Your Website
+//       </Link>{' '}
+//       {new Date().getFullYear()}
+//       {'.'}
+//     </Typography>
+//   );
+// }
 
 const steps = ['Your details', 'Select preferences', 'Review'];
 
@@ -72,6 +100,7 @@ const defaultTheme = createTheme({
 export default function Checkout() {
   const [name, setName] = React.useState("")
   const [address, setAddress] = React.useState("")
+  const [password, setPassword] = React.useState("")
   const [genre, setGenre] = React.useState([])
   const [favorites, setFavorites] = React.useState([])
   const navigate = useNavigate()
@@ -87,9 +116,11 @@ export default function Checkout() {
       if(!name) {alert("Enter your name!");return} 
 
         let validRegex = /^\S+@\S+\.\S+$/;
+        let validPassRegex = /^(?=.*\d).{8,}$/;
 
-          if(!address.match(validRegex)) {alert("Wrong email!");return}
-        
+        if(!address.match(validRegex)) {alert("Wrong email!");return}
+        if(!password.match(validPassRegex)) {alert("Password must contain 8 characters and have atleast one numnber!"); return;}
+
         setActiveStep(activeStep + 1)
 
     }
@@ -102,11 +133,18 @@ export default function Checkout() {
         alert("Choose atleast 3 favorites and less than 10")
       else
       {
-              localStorage.setItem("name", name);
-      localStorage.setItem("address", address);
-      localStorage.setItem("genre", JSON.stringify(genre));
-      localStorage.setItem("favorites", JSON.stringify(favorites));
-        setActiveStep(activeStep + 1)
+             
+        const userData = {
+          name: name,
+          email: address,
+          password: password,
+          genres: genre,
+          favorites: favorites,
+        };
+
+// Call the function to register a user
+        registerUser(userData);
+        setActiveStep(activeStep + 1);
       }
     }
 
@@ -121,7 +159,7 @@ export default function Checkout() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <AddressForm setName={setName} setAddress = {setAddress} />;
+      return <AddressForm setName={setName} setAddress = {setAddress} setPassword = {setPassword}/>;
     case 1:
       return <PaymentForm setGenre={setGenre} setFavorites = {setFavorites} />;
     case 2:
