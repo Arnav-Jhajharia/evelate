@@ -12,28 +12,28 @@ const Component = () => {
     const advance = roadmap[topic]
     return (
       <>
-      <h1 style={{marginLeft: 'auto', textAlign: 'center'}}>How to start {advance.title}</h1>
+      <h1 style={{marginLeft: 'auto', textAlign: 'center'}}> {advance.title + ' [Preview]'} </h1>
         <VerticalTimeline>
-            {
+        {
                 advance.content.map((specific, index) => {
-                      return <VerticalTimelineElement
-      onTimelineElementClick={() => navigate(`/courses/roadmapcontent/${topic}/${String.fromCharCode(97 + index)}`)}
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: background, color: color }}
-    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-    date="2 weeks"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    // icon={<WorkIcon />}
-  >
-    <h3 className="vertical-timeline-element-title">{specific.heading}</h3>
-    <h4 className="vertical-timeline-element-subtitle"></h4>
-    <p>
-{specific.content}    </p>
-  </VerticalTimelineElement>
-                })
+      return <VerticalTimelineElement
+                onTimelineElementClick={() => (topic != 'mentica')?navigate(`/courses/roadmapcontent/${topic}/${String.fromCharCode(97 + index)}`):navigate(`mentica.in`)}
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: background, color: color }}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                date=""
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+              // icon={<WorkIcon />}
+              >
+          <h3 className="vertical-timeline-element-title">{specific.heading}</h3>
+          <h4 className="vertical-timeline-element-subtitle"></h4>
+          <p>
+          {specific.content}    </p>
+           </VerticalTimelineElement>
+                }
+                )
 
-}
-  
+    }
     </VerticalTimeline>
     </>
     )

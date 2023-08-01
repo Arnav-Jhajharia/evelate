@@ -46,7 +46,7 @@ const router = createBrowserRouter([
   {
     path: "/wordpower/*",
     element: <Provider><Error /></Provider>,
-  },,
+  },
 
   {
     path: "/courses/:type/:course/:inner?",
@@ -58,6 +58,9 @@ const router = createBrowserRouter([
   },
    {
     path: "/roadmap",
+    loader: async () => {
+      return redirect('/roadmap/webdev')
+    },
     element: (
       <RoadmapVE />
     ),

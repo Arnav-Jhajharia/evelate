@@ -66,6 +66,35 @@ webdev: {
     content: 'Stay updated with the latest web development trends, tools, and frameworks. Engage with online communities, follow industry blogs, and participate in relevant courses or conferences.'
   }], 
   title: 'Web Development (Full Stack)'
+},
+mentica: {
+  content: [
+    {
+      link: 'a',
+    heading: 'Getting started',
+    content: 'Mentica is every teenager’s go-to e-mental health service. To get started, simply type mentica.in on your browser. It will take you to mentica’s fully secure and responsive website. The page will ask you to select the option which most accurately describes your persistent feelings. '
+  },{
+    heading: 'Quiz',
+    content: 'Next, the website takes you to a more comprehensive checklist where you can check all options that apply to you. After submitting, you are given a probability assessment of the difficulties you may be facing along with additional recommended quizzes. '
+  },
+  {
+    heading: 'Progress in a solution oriented direction',
+    content: 'Mentica is exactly the kind of platform that works in a solution-oriented direction. After finishing the quiz, you can access their compilation of 150+ resources, ranging from very specific to general, covering a wide variety of situations. There are really interesting resources like a CBT-Based social-anxiety self-help guide!'
+  },  
+  {
+    heading: 'E - Journalling',
+  content: 'You can use their e-journal system. Their e-journal has 100+ prompts designed specifically to help the user reflect on their situation and work towards better expression and clarity of thought. '
+  },
+  {
+    heading: 'Weekly blog',
+    content: 'Mentica has their own weekly blog which is maintained and updated by student contributors. They’ve covered interesting topics like Black and White thinking and the glamourisation of mental health by media today. They also produce visually appealing, interactive and informative content on Instagram @mentica._ regularly. Be sure to follow their page!'
+  },
+  {
+    heading: 'Getting involved',
+    content: 'To get involved with Mentica, students can work as volunteers in their “Mental health for all” workshops, or work back-end in fields like research, design and web-development. Currently, Mentica is a team of 9 high-school students.'
+  },
+ ], 
+  title: 'How to use mentica?'
 }
 }
 export default roadmap;
