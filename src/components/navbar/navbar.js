@@ -61,7 +61,7 @@ function linkAction(){
                
               </li>
               
-              <li className="nav__item"><a href="#" className="nav__link">Roadmap</a></li>
+              <li className="nav__item"><a href="/roadmap" className="nav__link">Roadmap</a></li>
               <li className="nav__item"><Link reloadDocument to="/random" className="nav__link">Daily</Link></li>
                {/* <li className="nav__item"><a href="#" className="nav__link">About</a></li> */}
               <li className="nav__item"><Link reloadDocument to="/wordpower" className="nav__link">Word Power</Link></li>
