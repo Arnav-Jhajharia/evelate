@@ -26,6 +26,7 @@ import {
 import Home from "./components/wordpower/components/Home"
 import Quiz from "./components/wordpower/components/Quiz"
 import Result from "./components/wordpower/components/Result"
+import Guides from './components/guides/'
 import Error from "./components/wordpower/components/Error"
 import { Provider } from './components/wordpower/context/QuizContext'
 import RoadmapVE from "./components/Roadmap/courseDetails"
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/wordpower",
     element: <Home />,
+  },
+  {
+    path: "/guides",
+    element: <Guides />,
   },
   {
     path: "/wordpower/quiz/:level",
